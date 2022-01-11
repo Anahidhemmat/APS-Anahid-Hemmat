@@ -149,3 +149,9 @@ console.log(concatinate);
 
 //rest operator
 //we can use rest operator as a function parameter
+
+function multiply(multiplier, ...numbers) {
+  return numbers.map((num) => num * multiplier);
+}
+
+console.log(multiply(5, 1, 2, 3, 4, 5));
