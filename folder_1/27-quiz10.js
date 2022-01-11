@@ -75,10 +75,10 @@ let restaurantFinderApplication = {
   },
   countNumberOfRestaurantsInArea: function (area) {
     // Complete here
-    let available = restaurants.filter(
+    let numberOfavailableRestaurent = restaurants.filter(
       (add) => add.address.area === area
     ).length;
-    return available;
+    return numberOfavailableRestaurent;
   },
 };
 
