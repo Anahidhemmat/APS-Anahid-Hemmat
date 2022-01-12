@@ -182,3 +182,18 @@ function isFirstSuperior(arr1, arr2) {
 }
 
 console.log(isFirstSuperior([1, 2, 4], [1, 2, 3]));
+
+const random = { yourSignature: " " };
+
+//Your task is, given an object, prevent new properties from being added to that object, but you should still be able to change the value of the existing properties.
+function signYourName(obj) {
+  // write your code here
+
+  Object.seal(obj);
+
+  // DON'T CHANGE OR REMOVE THE LINES BELOW
+  obj.yourSignature = "Whatever";
+  obj.spouseSignature = "Nice Try";
+  return obj;
+}
+console.log(signYourName(random));
