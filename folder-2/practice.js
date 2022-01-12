@@ -169,3 +169,16 @@ function sortDrinkByPrice(drinks) {
 }
 
 console.log(sortDrinkByPrice(drinks));
+
+//Create a function that returns whether the first array is slightly superior to that of the second.
+function isFirstSuperior(arr1, arr2) {
+  let n = arr1.length;
+  for (i = 0; i < n; i++) {
+    if (arr1[i] > arr2[i]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(isFirstSuperior([1, 2, 4], [1, 2, 3]));
