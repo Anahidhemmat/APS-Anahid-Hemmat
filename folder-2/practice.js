@@ -158,3 +158,14 @@ function totalAmountAdjectives(obj) {
 }
 
 console.log(totalAmountAdjectives(user001));
+
+//sorting array of abjects
+const drinks = [
+  { name: "lemonade", price: 50 },
+  { name: "lime", price: 10 },
+];
+function sortDrinkByPrice(drinks) {
+  return drinks.sort((a, b) => (a.price > b.price ? 1 : -1));
+}
+
+console.log(sortDrinkByPrice(drinks));
