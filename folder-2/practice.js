@@ -127,3 +127,34 @@ function nSidedShape(n) {
       break;
   }
 }
+
+//Given a number and an object with min and max properties, return true if the number lies within the given range
+const range = {
+  min: 0,
+  max: 10,
+};
+function isInRange(num, range) {
+  if (num >= range.min && num <= range.max) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isInRange(4, range));
+
+//Given an object, return a string that concatenates all the values and adds the 2nd key at the end. Make sure you keep an empty space between them but not at the beginning or end of the string.
+
+function sayWhat(obj) {
+  return Object.values(obj).concat(obj[2]).join(" ");
+}
+
+console.log(sayWhat(myCar));
+
+//Count the total number of keys used.
+function totalAmountAdjectives(obj) {
+  let array = Object.keys(obj);
+  return array.length;
+}
+
+console.log(totalAmountAdjectives(user001));
