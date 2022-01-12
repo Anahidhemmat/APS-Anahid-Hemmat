@@ -218,3 +218,5 @@ function maximumScore(tileHand) {
 }
 
 console.log(maximumScore(maximumScoree));
+
+//Day two is done:)))
