@@ -42,3 +42,24 @@ function addName(obj, name, value) {
   return obj;
 }
 console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440));
+
+//Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
+function relationToLuke(name) {
+  let relation = {
+    "Darth Vader": function () {
+      return "Luke, I am your father.";
+    },
+    Leia: function () {
+      return "Luke, I am your sister.";
+    },
+    Han: function () {
+      return "Luke, I am your brother in law.";
+    },
+    R2D2: function () {
+      return "Luke, I am your R2D2.";
+    },
+  };
+  return relation[name]();
+}
+
+console.log(relationToLuke("Leia"));
