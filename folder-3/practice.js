@@ -97,3 +97,15 @@ function getDrink(type) {
 }
 let drink = getDrink("coke");
 console.log(drink);
+
+//Check if Two Items Are Equal
+const object = { a: 1 };
+const other = { a: 1 };
+function isEqual_myVersion(a, b) {
+  if (a[0] === b[0]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isEqual_myVersion(object, other));
