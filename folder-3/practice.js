@@ -63,3 +63,23 @@ function relationToLuke(name) {
 }
 
 console.log(relationToLuke("Leia"));
+
+//switch statments with objects
+const type = "coke";
+
+const drinks = {
+  coke: function () {
+    return "Coke";
+  },
+  pepsi: function () {
+    return "Pepsi";
+  },
+  lemonade: function () {
+    return "Lemonade";
+  },
+  juice: function () {
+    return "Juice";
+  },
+};
+
+console.log(drinks[type]());
