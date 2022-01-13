@@ -22,3 +22,16 @@ function calculateDifference(obj, limit) {
   return sum - limit;
 }
 console.log(calculateDifference({ skate: 10, painting: 20 }, 19));
+
+//Given an object of how many more pages each ink color can print, output the maximum number of pages the printer can print before any of the colors run out.
+const inkLevel = {
+  cyan: 10,
+  magenta: 20,
+  yellow: 100,
+};
+
+function inkLevels(inks) {
+  let inksValues = Object.values(inks);
+  return Math.min(...inksValues);
+}
+console.log(inkLevels(inkLevel));
