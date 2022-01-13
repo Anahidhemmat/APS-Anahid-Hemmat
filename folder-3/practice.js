@@ -83,3 +83,17 @@ const drinks = {
 };
 
 console.log(drinks[type]());
+
+//Object literal that returns string
+
+function getDrink(type) {
+  let drinks = {
+    coke: "Coke",
+    soda: "Soda",
+    lemonade: "lemonade",
+    default: "Pepsi",
+  };
+  return "My favorite drink is " + (drinks[type] || drinks["default"]);
+}
+let drink = getDrink("coke");
+console.log(drink);
