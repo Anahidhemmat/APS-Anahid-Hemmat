@@ -33,16 +33,14 @@ const itemsPurchased = {
   Laptop: "$5,000",
   PC: "$1200",
 };
-for (let keys in itemsPurchased) {
-  console.log(itemsPurchased[keys]);
-}
+
 function enoughMoney(obj, money) {
   //const price = Object.values(obj).map((num) => parseFloat(num.slice(1)));
   let array = [];
   for (const keys in obj) {
     obj[keys] = obj[keys].slice(1).replace(",", "");
     if (obj[keys] <= money.slice(1)) {
-      array.unshift(Object.keys(obj));
+      array.unshift(keys);
     }
   }
   return array;
