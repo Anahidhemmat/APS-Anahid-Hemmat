@@ -10,3 +10,16 @@ function match(candidate, job) {
     throw new Error("error");
   }
 }
+
+//Crash Override
+function aliasGen(name, lastName) {
+  // Code Here
+  let regExp = /^[a-z]/i;
+  if (regExp.test(name) && regExp.test(lastName)) {
+    name = name[0].toUpperCase();
+    lastName = lastName[0].toUpperCase();
+    return `${firstName[name]} ${surname[lastName]}`;
+  } else {
+    return "Your name must start with a letter from A - Z.";
+  }
+}
