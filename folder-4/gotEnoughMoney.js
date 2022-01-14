@@ -43,6 +43,10 @@ function enoughMoney(obj, money) {
       array.unshift(keys);
     }
   }
-  return array;
+  if (array.length >= 1) {
+    return array.sort();
+  } else {
+    return "NOTHING!";
+  }
 }
 console.log(enoughMoney(itemsPurchased, "$300"));
