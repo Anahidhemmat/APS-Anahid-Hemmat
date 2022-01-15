@@ -161,3 +161,12 @@ myImmutableobj.arr.push(5);
 console.log(myImmutableobj.arr); // [1, 2, 3, 4, 5]
 
 //to also protect the contents of myImmutableObject.arr, you would also need to make "arr" immutable.
+
+//Object constant
+//By combining writable:false and configurable:false, you can essentially create a constant (cannot be changed, redefined or deleted) as an object property, like:
+const number = {};
+Object.defineProperty(number, "favoriteNum", {
+  value: 2,
+  writable: false,
+  configurable: false,
+});
