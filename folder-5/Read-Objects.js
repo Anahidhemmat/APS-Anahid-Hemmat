@@ -170,3 +170,17 @@ Object.defineProperty(number, "favoriteNum", {
   writable: false,
   configurable: false,
 });
+
+//Prevent Extensions
+//If you want to prevent an object from having new properties added to it, but otherwise leave the rest of the object's properties alone, call Object.preventExtensions(..)
+
+let myObject4 = {
+  a: 2,
+};
+
+Object.preventExtensions(myObject4);
+
+myObject4.b = 3;
+console.log(myObject4.b); // undefined
+myObject4.a = 5;
+console.log(myObject4.a); //5
