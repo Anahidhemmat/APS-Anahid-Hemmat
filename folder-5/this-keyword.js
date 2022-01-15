@@ -22,3 +22,20 @@ let myTodos2 = {
 };
 
 myTodos2.addMeeting();
+
+//how can we use "this" keyword
+
+let myTodos3 = {
+  day: "Monday",
+  meetings: 0,
+  meetDone: 0,
+  addMeeting: function (numberOfMeetings) {
+    return (this.meetings = this.meetings + numberOfMeetings);
+  },
+  summery: function () {
+    return `You have ${this.meetings} meetings today :)`;
+  },
+};
+
+console.log(myTodos3.addMeeting(4));
+console.log(myTodos3.summery());
