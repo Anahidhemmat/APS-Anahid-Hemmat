@@ -53,21 +53,36 @@ if (password.length >= 6) {
 
 //switch statement
 
-let sat = new Date.getDay();
+// let sat = new Date.getDay();
 
-switch (day) {
-  case 0:
-    console.log("sunday");
-    break;
-  case 1:
-    console.log("monday");
-    break;
-  case 2:
-    console.log("tuesday");
-    break;
-  default:
-    console.log("not valid");
-    break;
-}
+// switch (day) {
+//   case 0:
+//     console.log("sunday");
+//     break;
+//   case 1:
+//     console.log("monday");
+//     break;
+//   case 2:
+//     console.log("tuesday");
+//     break;
+//   default:
+//     console.log("not valid");
+//     break;
+// }
 
 //Arrays
+
+let valueArr = [24, "Arad", true, null];
+console.log(valueArr);
+console.log(valueArr.length);
+
+//nested arrays
+let array = [
+  [24, "Arad", true, null],
+  [24, "Arad", true, null],
+  [24, "Arad", true, null],
+  [24, "Arad", true, null],
+];
+array[3][1] = "Anahid";
+
+console.log(array);
