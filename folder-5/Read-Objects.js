@@ -48,3 +48,44 @@ console.log(myStr.charAt(3)); //b
 //Error objects are rarely created explicitly in code, but usually created automatically when exceptions are thrown.
 
 //It is strongly preferred by the majority of the JS community to use the LITERAL OBJECT FORM for a value.
+
+//Content
+//the contents of an object consist of values (any type) stored at specifically named locations, which we call properties.
+//What is stored in the container are  property names, which act as pointers (technically, references) to where the values are stored.
+
+const laptop = {
+  year: 2019,
+  model: "MacBook Prp",
+  color: "silver",
+  screen: "14 inch",
+};
+//there are to ways to acces properties
+// use . operator
+console.log(laptop.model); // "MacBook Prp"
+//use [] operator
+console.log(laptop["model"]); //"MacBook Prp"
+
+//In objects, property names are always strings.
+
+let wantA = true;
+const obj = {
+  A: 2,
+};
+
+let idx;
+
+if (wantA) {
+  idx = "A";
+}
+//later
+console.log(obj[idx]); // 2
+
+//be careful not to confuse the use of numbers between objects and arrays.
+
+const obj2 = {};
+
+obj2[true] = "Hi!";
+obj2[3] = "baby";
+obj2[obj2] = "unknown";
+
+console.log(obj2["true"], obj2["3"], obj2["[object Object]"]); // "Hi!" "baby" "unknown"
