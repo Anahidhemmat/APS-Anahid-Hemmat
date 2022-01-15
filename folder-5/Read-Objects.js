@@ -184,3 +184,17 @@ myObject4.b = 3;
 console.log(myObject4.b); // undefined
 myObject4.a = 5;
 console.log(myObject4.a); //5
+
+//Seal method
+//The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable.
+//Values of present properties can still be changed as long as they are writable.
+
+const object1 = {
+  prop1: 45,
+};
+Object.seal(object1);
+object1.prop1 = 333;
+console.log(object1.prop1); //333
+
+delete object1.prop1; //cannot be deleted
+console.log(object1.prop1); //333
