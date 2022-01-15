@@ -86,3 +86,14 @@ let array = [
 array[3][1] = "Anahid";
 
 console.log(array);
+
+//Arrays
+let students = ["mamad", "ali", "anahid", "zahra", "jasem"];
+
+students.push("Arad", "20", 20);
+students.pop();
+students.pop();
+students.unshift("amir");
+students.shift();
+
+console.log(students);
