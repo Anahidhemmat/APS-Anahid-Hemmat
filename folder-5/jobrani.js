@@ -5,3 +5,10 @@ let dice2 = Math.floor(Math.random() * 6 + 1);
 let roll = `you rolled a ${dice1} and a ${dice2}. they sum ${dice1 + dice2}`;
 
 console.log(roll);
+
+//prompt
+let input = promp("How old are you?");
+let age = parseInt(input);
+let birthday = 1400 - age;
+
+console.log(birthday);
