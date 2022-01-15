@@ -35,3 +35,18 @@ if (trafficlight === "stop") {
 } else {
   console.log("purpulr");
 }
+
+//nesting if statement
+//creating password
+
+let password = "anahid123";
+
+if (password.length >= 6) {
+  if (password.indexOf(" ") === -1) {
+    console.log("Your password is strong");
+  } else {
+    console.log("your password contains empty string");
+  }
+} else {
+  console.log("Your password length is less than 6");
+}
