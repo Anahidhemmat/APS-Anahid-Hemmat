@@ -22,7 +22,7 @@ getBestStudent({
 }) ➞ "Mike"
 Notes
 All students in an object will have the same amount of test scores. So no student will have taken more tests than another. */
-let getBestStudent = {
+let testMark = {
   Susan: [67, 84, 75, 63],
   Mike: [87, 98, 64, 71],
   Jim: [90, 58, 73, 86],
@@ -32,6 +32,8 @@ function getBestStudent(obj) {
   let sumReduce;
   for (let keys in obj) {
     let average = (obj[keys] = obj[keys].reduce((a, b) => a + b));
-    console.log(average);
+   
+    
   }
 }
+console.log(getBestStudent(testMark));
