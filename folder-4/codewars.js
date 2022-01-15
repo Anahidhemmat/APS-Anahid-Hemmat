@@ -23,3 +23,14 @@ function aliasGen(name, lastName) {
     return "Your name must start with a letter from A - Z.";
   }
 }
+
+//Split the Bill
+function splitTheBill(x) {
+  //code away...
+  let array = Object.values(x);
+  let sum = array.reduce((a, b) => a + b) / array.length;
+  for (let key in x) {
+    x[key] = Math.round((x[key] - sum) * 100) / 100;
+  }
+  return x;
+}
