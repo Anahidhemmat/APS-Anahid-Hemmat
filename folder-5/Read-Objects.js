@@ -89,3 +89,45 @@ obj2[3] = "baby";
 obj2[obj2] = "unknown";
 
 console.log(obj2["true"], obj2["3"], obj2["[object Object]"]); // "Hi!" "baby" "unknown"
+
+//Computed Property Names
+//Syntax myObject[prefix + name]
+
+const prefix = "person";
+
+const names = {
+  [prefix + "One"]: "Anahid",
+  [prefix + "Two"]: "Kiana",
+  [prefix + "Three"]: "Mamad",
+};
+
+console.log(names["personOne"]); // Anahid
+console.log(names["personThree"]); // Mamad
+
+//There's nothing special about a function that comes from a property access.
+
+function foo() {
+  console.log("foo");
+}
+
+let someFoo = foo; //variable refrence to `foo`
+
+const myObject2 = {
+  someFoo: foo,
+};
+
+console.log(foo); // function foo(){..}
+console.log(someFoo); // function foo(){..}
+console.log(myObject2["someFoo"]); // function foo(){..}
+
+//Even when you declare a function expression as part of the object-literal, that function doesn't magically belong more to the object -- still just multiple references to the same function object:
+
+const myObject3 = {
+  foo: function foo() {
+    console.log("foo");
+  },
+};
+
+const someFoo2 = myObject3.foo;
+console.log(someFoo2); // function foo(){..}
+console.log(myObject3.foo); // function foo(){..}
