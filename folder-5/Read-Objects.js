@@ -131,3 +131,21 @@ const myObject3 = {
 const someFoo2 = myObject3.foo;
 console.log(someFoo2); // function foo(){..}
 console.log(myObject3.foo); // function foo(){..}
+
+//Arrays
+//arrays are objects with more structured organization for how and where values are stored
+
+const myArray = ["mamad", "jafar", "jasem"];
+console.log(myArray.length); //3
+console.log(myArray[0]); // "mamad"
+
+//you can also add properties onto the array
+myArray.ghasem = "ghasem";
+
+console.log(myArray.length); // 3
+console.log(myArray.ghasem); //ghasem
+//adding indexes to array
+myArray["4"] = "hashem";
+
+console.log(myArray.length); //5
+console.log(myArray[4]); //hashem
