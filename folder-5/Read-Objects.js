@@ -185,7 +185,7 @@ console.log(myObject4.b); // undefined
 myObject4.a = 5;
 console.log(myObject4.a); //5
 
-//Seal method
+//Object.seal(...)
 //The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable.
 //Values of present properties can still be changed as long as they are writable.
 
@@ -198,3 +198,16 @@ console.log(object1.prop1); //333
 
 delete object1.prop1; //cannot be deleted
 console.log(object1.prop1); //333
+
+//Object.freeze(..)
+//creates a frozen object, which means it takes an existing object and essentially calls Object.seal(..) on it,
+//but it also marks all "data accessor" properties as writable:false, so that their values cannot be changed.
+
+const myPhone = {
+  model: "iphone 12",
+  year: 2021,
+};
+
+Object.freeze(myPhone);
+myPhone.year = 2020;
+console.log(myPhone.year); // 2021
