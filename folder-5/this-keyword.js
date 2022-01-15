@@ -9,3 +9,16 @@ let myTodos = {
 };
 
 myTodos.addMeeting();
+
+//accessing properties of an object in function with "this" keyword
+
+let myTodos2 = {
+  day: "Monday",
+  meetings: 0,
+  meetDone: 0,
+  addMeeting: function () {
+    console.log(this);
+  },
+};
+
+myTodos2.addMeeting();
