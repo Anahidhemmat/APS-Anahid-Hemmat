@@ -149,3 +149,15 @@ myArray["4"] = "hashem";
 
 console.log(myArray.length); //5
 console.log(myArray[4]); //hashem
+
+//Immutability
+//It's important to note that all of these approaches create shallow immutability. That is, they affect only the object and its direct property characteristics. If an object has a reference to another object (array, object, function, etc), the contents of that object are not affected, and remain mutable.
+
+const myImmutableobj = {
+  arr: [1, 2, 3, 4],
+};
+console.log(myImmutableobj.arr); // [1, 2, 3, 4]
+myImmutableobj.arr.push(5);
+console.log(myImmutableobj.arr); // [1, 2, 3, 4, 5]
+
+//to also protect the contents of myImmutableObject.arr, you would also need to make "arr" immutable.
