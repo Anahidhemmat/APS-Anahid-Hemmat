@@ -109,3 +109,19 @@ function isEqual_myVersion(a, b) {
   }
 }
 console.log(isEqual_myVersion(object, other));
+
+//not completed
+let millionsR = [
+  ["Nice", 942208],
+  ["Abu Dhabi", 1482816],
+  ["Naples", 2186853],
+  ["Vatican City", 572],
+];
+
+function millionsRounding(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let array = arr[i];
+  }
+}
+
+console.log(millionsRounding(millionsR));
