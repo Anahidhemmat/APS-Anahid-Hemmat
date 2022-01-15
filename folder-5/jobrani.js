@@ -50,3 +50,24 @@ if (password.length >= 6) {
 } else {
   console.log("Your password length is less than 6");
 }
+
+//switch statement
+
+let sat = new Date.getDay();
+
+switch (day) {
+  case 0:
+    console.log("sunday");
+    break;
+  case 1:
+    console.log("monday");
+    break;
+  case 2:
+    console.log("tuesday");
+    break;
+  default:
+    console.log("not valid");
+    break;
+}
+
+//Arrays
