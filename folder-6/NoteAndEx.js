@@ -68,3 +68,41 @@ console.log(countries); //[ 'Andorra', 'Vietnam', 'Österreich' ] (wrong)
 
 countries.sort((a, b) => a.localeCompare(b));
 console.log(countries); // [ 'Andorra', 'Österreich', 'Vietnam' ] (correct)
+
+//class with mahya
+
+//foreach method
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+numbers.forEach((num) => console.log(num));
+//filter method
+let x = numbers.filter((num) => num > 3);
+console.log(x);
+
+//map
+
+let n = numbers.map((element) => element ** 2);
+console.log(n);
+
+//every
+let n2 = numbers.every(function (ele) {
+  return ele > 5;
+});
+
+console.log(n2); //false
+
+//some
+
+console.log(
+  numbers.some(function (ele) {
+    return ele > 4; //true
+  })
+);
+
+//reduce
+
+let myArr = numbers.reduce((pereviusItem, currentItem) => {
+  return pereviusItem + currentItem;
+}, 10); //initialValue
+
+console.log(myArr);
