@@ -192,3 +192,11 @@ console.log(Math.max(...numbers)); //9
 const arr3 = [7, 8, 9, 10];
 
 const arr4 = [...numbers, ...arr3];
+
+//rest
+
+const student = {
+  name: "mehdi",
+  age: 20,
+  freiend: ["mamad"],
+};
