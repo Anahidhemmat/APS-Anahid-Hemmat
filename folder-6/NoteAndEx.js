@@ -106,3 +106,33 @@ let myArr = numbers.reduce((pereviusItem, currentItem) => {
 }, 10); //initialValue
 
 console.log(myArr);
+
+//for loop
+
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+for (let index = 0; index < 10; index++) {
+  console.log("Anna");
+}
+
+let arr2 = ["a", "b", "c"];
+
+for (let index = 0; index < arr2.length; index++) {
+  console.log(arr2[index]);
+}
+
+for (let index = 0; index < 5; index++) {
+  arr.push(index);
+}
+
+console.log(arr);
+
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+  sum += arr[i];
+}
+
+console.log(sum);
