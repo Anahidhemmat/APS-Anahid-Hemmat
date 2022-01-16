@@ -136,3 +136,12 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(sum);
+
+//while loop
+
+let num = 12;
+
+while (num !== 0) {
+  console.log(num);
+  num--;
+}
