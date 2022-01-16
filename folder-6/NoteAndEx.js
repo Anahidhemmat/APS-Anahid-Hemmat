@@ -58,3 +58,13 @@ console.log(arr); //[ 1, 5, 10, 12, 23, 1000 ]
 
 arr.sort((a, b) => a - b);
 console.log(arr); //[ 1, 5, 10, 12, 23, 1000 ]
+
+//use localCompare methods to sort strings correctly
+
+const countries = ["Österreich", "Andorra", "Vietnam"];
+
+countries.sort((a, b) => (a > b ? 1 : -1));
+console.log(countries); //[ 'Andorra', 'Vietnam', 'Österreich' ] (wrong)
+
+countries.sort((a, b) => a.localeCompare(b));
+console.log(countries); // [ 'Andorra', 'Österreich', 'Vietnam' ] (correct)
