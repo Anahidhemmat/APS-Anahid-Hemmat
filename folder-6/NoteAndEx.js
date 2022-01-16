@@ -145,3 +145,22 @@ while (num !== 0) {
   console.log(num);
   num--;
 }
+
+//0 til 100 return even numbers
+
+for (let index = 0; index <= 100; index++) {
+  if (index % 2 === 0) {
+    console.log("even ", index);
+  }
+}
+
+for (let index = 0; index <= 100; index += 2) {
+  console.log(index, "even");
+}
+
+//return odd numbers
+for (let index = 0; index <= 100; index++) {
+  if (index % 2 === 1) {
+    console.log("even ", index);
+  }
+}
