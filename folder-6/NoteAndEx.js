@@ -164,3 +164,13 @@ for (let index = 0; index <= 100; index++) {
     console.log("even ", index);
   }
 }
+
+for (let index = 25; index >= 0; index--) {
+  if (index % 5 === 0) {
+    console.log(index);
+  }
+}
+
+for (let index = 25; index >= 0; index -= 5) {
+  console.log(index);
+}
