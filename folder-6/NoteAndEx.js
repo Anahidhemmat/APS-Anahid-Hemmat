@@ -183,3 +183,8 @@ for (let index = 0; index <= 10; index++) {
     if (j === 4) break;
   }
 }
+//spread operator
+
+console.log(Math.max(numbers)); //NaN
+
+console.log(Math.max(...numbers)); //9
