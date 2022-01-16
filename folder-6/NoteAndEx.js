@@ -174,3 +174,12 @@ for (let index = 25; index >= 0; index--) {
 for (let index = 25; index >= 0; index -= 5) {
   console.log(index);
 }
+
+//nested loop
+
+for (let index = 0; index <= 10; index++) {
+  for (let j = 0; j <= 10; j++) {
+    console.log(index * j);
+    if (j === 4) break;
+  }
+}
