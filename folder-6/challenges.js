@@ -7,3 +7,13 @@ function addUp(num) {
 }
 
 console.log(addUp(4));
+
+//Sort an Array by String Length
+
+const randomArr = ["Leonardo", "Michelangelo", "Raphael", "Donatello"];
+
+function sortByLength(arr) {
+  return arr.sort((a, b) => a.length - b.length);
+}
+
+console.log(sortByLength(randomArr));
