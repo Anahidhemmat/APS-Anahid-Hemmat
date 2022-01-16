@@ -17,3 +17,22 @@ function sortByLength(arr) {
 }
 
 console.log(sortByLength(randomArr));
+
+//Given an object of people and their ages, return how old the people would be after n years have passed. Use the absolute value of n.
+
+const names = {
+  Joel: 32,
+  Fred: 44,
+  Reginald: 65,
+  Susan: 33,
+  Julian: 13,
+};
+
+function afterNYears(namesObj, nYears) {
+  for (let ages in namesObj) {
+    namesObj[ages] = namesObj[ages] + nYears;
+  }
+  return namesObj;
+}
+
+console.log(afterNYears(names, 10));
