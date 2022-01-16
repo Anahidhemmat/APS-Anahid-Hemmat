@@ -25,3 +25,36 @@ console.log(pow(2, 2)); // 4
 function pow2(number2, n2) {
   n2 === 1 ? number2 : number2 * pow2(number2, n2 - 1);
 }
+
+//how to use Array.sort() method
+//The call to arr.sort() sorts the array in place, changing its element order.
+
+const arr = [1, 5, 10, 23, 1000, 12];
+arr.sort();
+console.log(arr); //[ 1, 10, 1000, 12, 23, 5 ]
+
+//but it doesn't work as expected
+//we can fix that like this
+
+function compareNumeric(a, b) {
+  if (a > b) return 1;
+  if (a === b) return 0;
+  if (a < b) return -1;
+}
+
+arr.sort(compareNumeric);
+console.log(arr); // [1, 5, 10, 12, 23, 1000]; //now it's work as intended
+
+//Actually, a comparison function is only required to return a positive number to say “greater” and a negative number to say “less”.
+//That allows to write shorter functions:
+
+arr.sort(function (a, b) {
+  return a - b;
+});
+
+console.log(arr); //[ 1, 5, 10, 12, 23, 1000 ]
+
+//We can use arrow functions here for neater sorting:
+
+arr.sort((a, b) => a - b);
+console.log(arr); //[ 1, 5, 10, 12, 23, 1000 ]
