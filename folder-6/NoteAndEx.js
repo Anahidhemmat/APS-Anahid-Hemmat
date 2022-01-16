@@ -188,3 +188,7 @@ for (let index = 0; index <= 10; index++) {
 console.log(Math.max(numbers)); //NaN
 
 console.log(Math.max(...numbers)); //9
+
+const arr3 = [7, 8, 9, 10];
+
+const arr4 = [...numbers, ...arr3];
