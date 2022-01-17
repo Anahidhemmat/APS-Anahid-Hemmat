@@ -128,3 +128,11 @@ const pairs2 = pairsByIndex2.map(function (indexes) {
 });
 
 console.log(pairs2);
+
+// Using the .map() method, create a new array with `numbers` multiplied by 100
+
+let numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
+
+let multiply = numbers.map((number) => number * 100);
+
+console.log(multiply); //[ 10, 20, 30, 40, 50 ]
