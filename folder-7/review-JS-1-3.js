@@ -208,3 +208,15 @@ let sampleName = "benyamin";
 
 console.log(capitalise(sampleName));
 console.log(capitalise("hello"));
+
+//split method
+
+//It splits the string into an array by the given delimiter delim.
+
+let names2 = "Mamad, Ali, Pari";
+let array = names2.split(", ");
+console.log(array); //[ 'Mamad', 'Ali', 'Pari' ]
+
+for (let name in array) {
+  return `A message to ${name}.`; //// A message to Mamad  (and other names)
+}
