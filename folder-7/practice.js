@@ -100,3 +100,11 @@ function addUpTo2(n) {
   return num;
 }
 console.log(addUpTo2(3)); //6
+
+//another solution for function above with recursion
+
+function addUpTo3(n) {
+  if (n === 1) return 1;
+  return n + addUpTo3(n - 1);
+}
+console.log(addUpTo3(3)); //6
