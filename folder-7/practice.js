@@ -21,3 +21,14 @@ function calculateExponent(num, exp) {
 }
 
 console.log(calculateExponent(5, 5));
+
+//another way to write function above
+function calculateExponent(num, exp) {
+  let newNum = 0;
+  for (let i = 1; i <= exp; i++) {
+    newNum = Math.pow(num, i);
+  }
+  return newNum;
+}
+
+console.log(calculateExponent(5, 5));
