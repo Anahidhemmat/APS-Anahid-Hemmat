@@ -299,3 +299,8 @@ Write a function that:
 function sortArray(array) {
   return array.slice().sort();
 }
+
+//another solution for function above
+function sortArray(array) {
+  return Array.from(array).sort();
+}
