@@ -32,3 +32,17 @@ function calculateExponent(num, exp) {
 }
 
 console.log(calculateExponent(5, 5));
+
+//Create a function that takes an array and returns the types of values (data types) in a new array.
+let random = ["214", true, false, 2, 2.15, [], null];
+
+function arrayValuesTypes(arr) {
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(typeof arr[i]);
+  }
+  return newArr;
+}
+
+console.log(arrayValuesTypes(random));
