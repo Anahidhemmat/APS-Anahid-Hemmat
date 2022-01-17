@@ -121,3 +121,17 @@ function addIndexes(arr) {
 }
 
 console.log(addIndexes([0, 0, 0, 0, 0])); //[ 0, 1, 2, 3, 4 ]
+
+//Create a function which returns the total of all odd numbers up to and including n.
+//n will be given as an odd number.
+
+function addOddToN(n) {
+  let num = 0;
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 1) {
+      num += i;
+    }
+  }
+  return num;
+}
+console.log(addOddToN(13)); //49
