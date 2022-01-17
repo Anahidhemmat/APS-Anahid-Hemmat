@@ -68,4 +68,14 @@ function search(arr, item) {
   return arr.includes(item) ? arr.indexOf(item) : -1;
 }
 
-console.log(search([1, 5, 3], 5));
+console.log(search([1, 5, 3], 9));
+
+//Create a function which returns the length of a string, WITHOUT using String.length property.
+function length(s) {
+  let count = 0;
+  for (let i = 0; i < s.length; i++) {
+    count++;
+  }
+  return count;
+}
+console.log(length("wash your hands!"));
