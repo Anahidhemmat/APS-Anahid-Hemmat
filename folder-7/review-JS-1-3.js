@@ -1,3 +1,4 @@
+//reviewing JS 1-3 exersices
 /* 
   You are given an array of names.
   Using .find(), we'd like to find the first name which starts with A and is longer than 7 letters.
@@ -157,3 +158,30 @@ function newArray(number) {
 }
 
 arr.map(newArray).forEach((element) => console.log(element));
+
+/*
+  Array methods - .slice()
+  ------------------------
+  The variable `firstFive` should contain the first five items of `everyone`
+  The variable `lastFive` should contain the last five items of `everyone`
+*/
+
+let everyone = [
+  "Bahar",
+  "Fatemeh",
+  "Mahjan",
+  "Arad",
+  "Pedram",
+  "AmirMostafa",
+  "Mohsen",
+];
+
+let firstFive = everyone.slice(0, 5); // complete this statement
+let lastFive = everyone.slice(-5); // complete this statement
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+
+console.log(firstFive);
+console.log(lastFive);
