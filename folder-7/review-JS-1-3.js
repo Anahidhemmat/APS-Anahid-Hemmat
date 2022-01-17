@@ -304,3 +304,15 @@ function sortArray(array) {
 function sortArray(array) {
   return Array.from(array).sort();
 }
+
+/*Write a function that:
+- Takes an array of strings as input.
+- Removes any spaces in the beginning or end each string.
+- Removes any forward slashes (/) in the strings.
+- Makes the strings all lowercase.
+*/
+
+function tidyUpString(arr) {
+  let newArr = arr.map((str) => str.replace("/", "").trim().toLowerCase());
+  return newArr;
+}
