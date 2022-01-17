@@ -58,20 +58,35 @@ const pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
 
-const isValueNull = (index) => index === null;
+// const isValueNull = (index) => index === null;
 
-if (pairsByIndex.some(isValueNull)) {
-  console.log("Error !");
-  process.exit(1);
+// if (pairsByIndex.some(isValueNull)) {
+//   console.log("Error !");
+//   process.exit(1);
+// }
+
+// const students = ["Javad", "Anahid", "Mina", "Atena"];
+// const mentors = ["Shirin", "Bahar", "Maryam", "Ayda"];
+
+// const pairs = pairsByIndex.map(function (indexes) {
+//   const student = students[indexes[0]];
+//   const mentor = mentors[indexes[1]];
+//   return [student, mentor];
+// });
+
+// console.log(pairs);
+
+/*
+   This program should check if the array `group` contains only students
+*/
+
+const students2 = ["Hossein", "Jamal", "Mehdi", "Shaden", "Zaynab", "Niloofar"];
+const group = ["Haniye", "Alireza", "Benyamin", "Fatemeh"];
+
+let groupIsOnlyStudents = group.every((person) => person === students2); // complete this statement
+
+if (groupIsOnlyStudents) {
+  console.log("The group contains only students");
+} else {
+  console.log("The group does not contain only students");
 }
-
-const students = ["Javad", "Anahid", "Mina", "Atena"];
-const mentors = ["Shirin", "Bahar", "Maryam", "Ayda"];
-
-const pairs = pairsByIndex.map(function (indexes) {
-  const student = students[indexes[0]];
-  const mentor = mentors[indexes[1]];
-  return [student, mentor];
-});
-
-console.log(pairs);
