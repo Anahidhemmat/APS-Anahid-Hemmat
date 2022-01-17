@@ -89,3 +89,14 @@ function addUpTo(n) {
   return num;
 }
 console.log(addUpTo(3)); //6
+
+//another solution for function above
+
+function addUpTo2(n) {
+  let num = 0;
+  for (let i = 1; i <= n; i++) {
+    num += i;
+  }
+  return num;
+}
+console.log(addUpTo2(3)); //6
