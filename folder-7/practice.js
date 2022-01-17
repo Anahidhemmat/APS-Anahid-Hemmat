@@ -135,3 +135,11 @@ function addOddToN(n) {
   return num;
 }
 console.log(addOddToN(13)); //49
+
+//Create a function that takes an array of strings and numbers, and filters out the array so that it returns an array of integers only.
+let random2 = ["A", 0, "Edabit", 1729, "Python", "1729"];
+
+function filterArray(arr) {
+  return arr.filter((item) => Number.isInteger(item));
+}
+console.log(filterArray(random2));
