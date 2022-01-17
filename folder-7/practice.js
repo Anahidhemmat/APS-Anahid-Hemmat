@@ -163,3 +163,16 @@ function integerBoolean(n) {
 }
 
 console.log(integerBoolean("100101")); //[ true, false, false, true, false, true ]
+
+//Write a function that accepts the width and height (m, n) and an optional proc s and generates an array with m elements. Each element is a string consisting of either:
+// The default character (hash #) repeating n times (if no proc is given).
+// The character passed in through the proc repeating n times.
+
+function makeRug(m = 3, n = 5, s = "#") {
+  //we can assign default values for parameters
+  let str = s.repeat(n);
+  //   arr.push(str.repeat(m));
+  let arr = new Array(m).fill(str);
+  return arr;
+}
+console.log(makeRug());
