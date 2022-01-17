@@ -281,3 +281,12 @@ names3[5] = names3[5].substring(0, 6);
 names3.forEach((name) => {
   console.log(name);
 });
+
+/*
+Write a function that:
+- Accepts an array as a parameter.
+- Returns a new array containing the first five elements of the passed array.
+*/
+function first5(arr) {
+  return arr.slice(5);
+}
