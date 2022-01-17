@@ -60,3 +60,12 @@ function findIndex(arr, str) {
 }
 
 console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh"));
+
+//Create a function that finds the index of a given item.
+//If the item is not present, return -1.
+
+function search(arr, item) {
+  return arr.includes(item) ? arr.indexOf(item) : -1;
+}
+
+console.log(search([1, 5, 3], 5));
