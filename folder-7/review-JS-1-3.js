@@ -253,3 +253,31 @@ statement = statement.substring(0, 18);
 console.log(statement);
 
 //substring() is basiclly a copy of slice
+
+/* 
+  You are given an array with a list of names.
+
+  You should log only the peoples first names.
+
+  For example, if the name is "Ali Mallak" you should return "Ali"
+*/
+
+let names3 = [
+  "Mehdi Azimi",
+  "Jamal Shamsi",
+  "Mehdi Baqri",
+  "Fatemeh Hemmati",
+  "Mina Borhani",
+  "Hoseyn vafadar",
+];
+
+names3[0] = names3[0].substring(0, 5);
+names3[1] = names3[1].substring(0, 5);
+names3[2] = names3[2].substring(0, 5);
+names3[3] = names3[3].substring(0, 7);
+names3[4] = names3[4].substring(0, 5);
+names3[5] = names3[5].substring(0, 6);
+
+names3.forEach((name) => {
+  console.log(name);
+});
