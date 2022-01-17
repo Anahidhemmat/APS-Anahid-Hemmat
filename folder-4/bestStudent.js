@@ -29,11 +29,13 @@ let testMark = {
 };
 
 function getBestStudent(obj) {
+  let averages;
   let sumReduce;
   for (let keys in obj) {
-    let average = (obj[keys] = obj[keys].reduce((a, b) => a + b));
-   
-    
+     averages = (obj[keys] = obj[keys].reduce((a, b) => a + b));
+     sumReduce = keys;
+     if(Math.max(averages) === )
   }
+  
 }
 console.log(getBestStudent(testMark));
