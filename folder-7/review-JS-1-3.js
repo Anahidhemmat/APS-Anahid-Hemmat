@@ -90,3 +90,14 @@ if (groupIsOnlyStudents) {
 } else {
   console.log("The group does not contain only students");
 }
+
+//we can use every to compare arrays
+
+function isEqualArray(arr1, arr2) {
+  return (
+    arr1.length === arr2.length &&
+    arr1.every((item, index) => item === arr2[index])
+  );
+}
+
+console.log(isEqualArray([1, 2, 3], [1, 2, 3])); //true
