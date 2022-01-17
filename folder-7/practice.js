@@ -176,3 +176,18 @@ function makeRug(m = 3, n = 5, s = "#") {
   return arr;
 }
 console.log(makeRug());
+
+//Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+//That is: removes all dashes, each word after dash becomes uppercased.
+
+function camelize(str) {
+  let arr = str.split("-");
+  for (let i = 1; i < arr.length; i++) {
+    arr[i] = arr[i].split("");
+    arr[i][0] = arr[i][0].toUpperCase();
+    arr[i] = arr[i].join("");
+  }
+  return arr.join("");
+}
+
+console.log(camelize("background-color"));
