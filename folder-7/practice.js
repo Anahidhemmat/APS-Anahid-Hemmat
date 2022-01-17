@@ -142,4 +142,12 @@ let random2 = ["A", 0, "Edabit", 1729, "Python", "1729"];
 function filterArray(arr) {
   return arr.filter((item) => Number.isInteger(item));
 }
-console.log(filterArray(random2));
+console.log(filterArray(random2)); //[ 0, 1729 ]
+
+//Destructuring Assignment (Ignoring Values)
+let writeyourcodehere = [1, 2, 3, 4, 5, 6, 7, 8];
+
+[first, , , , , , , last] = writeyourcodehere;
+
+console.log(first); //1
+console.log(last); //8
