@@ -329,3 +329,26 @@ function remove(array = [1, 2, 3, 4, 5], index = 1) {
 }
 
 console.log(remove());
+
+/*
+Write a function that:
+- Takes an array of numbers as input.
+- Returns an array of strings formatted as percentages (e.g. 10 => "10%").
+- The numbers must be rounded to 2 decimal places.
+- Numbers greater 100 must be replaced with 100.
+*/
+
+function formatPercentage(array) {
+  let newArr = array.map((number) => {
+    if (number > 100) return 100 + "%";
+    if (number % 1 !== 0) {
+      let decimal = parseFloat(number.toFixed(2)) + "%";
+      return decimal;
+    } else {
+      return number + "%";
+    }
+  });
+  return newArr;
+}
+
+console.log(formatPercentage([23, 18.103, 187.2, 0.372]));
