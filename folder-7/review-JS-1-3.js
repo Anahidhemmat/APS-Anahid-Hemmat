@@ -213,10 +213,29 @@ console.log(capitalise("hello"));
 
 //It splits the string into an array by the given delimiter delim.
 
-let names2 = "Mamad, Ali, Pari";
-let array = names2.split(", ");
-console.log(array); //[ 'Mamad', 'Ali', 'Pari' ]
+// let names2 = "Mamad, Ali, Pari";
+// let array = names2.split(", ");
+// console.log(array); //[ 'Mamad', 'Ali', 'Pari' ]
 
-for (let name in array) {
-  return `A message to ${name}.`; //// A message to Mamad  (and other names)
+// for (let name in array) {
+//   return `A message to ${name}.`; //// A message to Mamad  (and other names)
+// }
+
+/*
+  Array methods - .includes()
+  ---------------------------
+  Complete the function below to check if a country is in the UK
+*/
+
+let ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
+
+function isInUK(country) {
+  return ukNations.indexOf(country) !== -1 ? true : false; // complete this statement
 }
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+console.log(isInUK("France"));
+console.log(isInUK("Republic of Ireland"));
+console.log(isInUK("England"));
