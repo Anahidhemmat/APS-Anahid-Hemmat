@@ -79,3 +79,13 @@ function length(s) {
   return count;
 }
 console.log(length("wash your hands!"));
+
+//Write a function that takes the last number of a consecutive list of numbers and returns the total of all numbers up to and including it.
+function addUpTo(n) {
+  let num = 0;
+  for (let i = 1; i <= n; i++) {
+    num = ((i + 1) / 2) * i;
+  }
+  return num;
+}
+console.log(addUpTo(3)); //6
