@@ -101,3 +101,30 @@ function isEqualArray(arr1, arr2) {
 }
 
 console.log(isEqualArray([1, 2, 3], [1, 2, 3])); //true
+
+/*
+  You are given a program that logs pairings between mentors and students
+  It fails because the array `pairsById` can contain different values that break the program
+  It is decided that array items which are not pairs should be filtered out
+  - Finish the statement on line 11 to produce an array with valid content
+  - Do not edit any of the existing code
+*/
+
+const pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+
+let pairsByIndex2 = pairsByIndexRaw.filter(
+  (item) => item !== null && item.length === 2
+); // Complete this statement
+//filttered array
+console.log(pairsByIndex2); //[ [ 0, 3 ], [ 1, 2 ], [ 2, 1 ] ]
+
+const students = ["Javad", "Anahid", "Mina", "Atena"];
+const mentors = ["Shirin", "Bahar", "Maryam", "Ayda"];
+
+const pairs2 = pairsByIndex2.map(function (indexes) {
+  const student = students[indexes[0]];
+  const mentor = mentors[indexes[1]];
+  return [student, mentor];
+});
+
+console.log(pairs2);
