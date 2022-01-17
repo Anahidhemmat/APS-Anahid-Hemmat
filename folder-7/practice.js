@@ -151,3 +151,15 @@ let writeyourcodehere = [1, 2, 3, 4, 5, 6, 7, 8];
 
 console.log(first); //1
 console.log(last); //8
+
+//Create a function that returns an array of booleans from a given number by iterating through the number one digit at a time and appending true into the array if the digit is 1 and false otherwise.
+function integerBoolean(n) {
+  let result = [];
+
+  for (let i = 0; i < n.length; i++) {
+    result.push(Boolean(parseInt(n[i])));
+  }
+  return result;
+}
+
+console.log(integerBoolean("100101")); //[ true, false, false, true, false, true ]
