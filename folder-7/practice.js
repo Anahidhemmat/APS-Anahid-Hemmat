@@ -46,3 +46,17 @@ function arrayValuesTypes(arr) {
 }
 
 console.log(arrayValuesTypes(random));
+
+//Create a function that takes an array and a string as arguments and returns the index of the string.
+
+function findIndex(arr, str) {
+  let result = 0;
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index] === str) {
+      result = arr.indexOf(str);
+    }
+  }
+  return result;
+}
+
+console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh"));
