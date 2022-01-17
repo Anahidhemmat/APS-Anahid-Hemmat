@@ -191,3 +191,16 @@ function camelize(str) {
 }
 
 console.log(camelize("background-color"));
+
+//another solution for function above
+
+function camelize2(str) {
+  return str
+    .split("-")
+    .map((word, index) =>
+      index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join("");
+}
+
+console.log(camelize2("background-color"));
