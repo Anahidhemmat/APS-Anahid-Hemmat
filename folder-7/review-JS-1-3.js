@@ -316,3 +316,16 @@ function tidyUpString(arr) {
   let newArr = arr.map((str) => str.replace("/", "").trim().toLowerCase());
   return newArr;
 }
+
+/*
+Write a function that:
+- Takes an array and an index as input.
+- Returns a new array containing the same elements, but without the element at the passed index.
+*/
+
+function remove(array = [1, 2, 3, 4, 5], index = 1) {
+  let arr1 = array.splice(index, 1);
+  return array;
+}
+
+console.log(remove());
