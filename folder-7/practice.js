@@ -10,3 +10,14 @@ function printArray(number) {
 }
 
 console.log(printArray(6));
+
+//Create a function that takes a base number and an exponent number and returns the calculation.
+function calculateExponent(num, exp) {
+  let newNum = 0;
+  for (let i = 1; i <= exp; i++) {
+    newNum = num ** i;
+  }
+  return newNum;
+}
+
+console.log(calculateExponent(5, 5));
