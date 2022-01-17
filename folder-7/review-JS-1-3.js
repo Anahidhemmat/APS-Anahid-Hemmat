@@ -290,3 +290,12 @@ Write a function that:
 function first5(arr) {
   return arr.slice(5);
 }
+
+/*
+Write a function that:
+- Accepts an array as a parameter.
+- Returns a new array containing the same elements, except sorted.
+*/
+function sortArray(array) {
+  return array.slice().sort();
+}
