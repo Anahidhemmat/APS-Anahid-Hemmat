@@ -352,3 +352,20 @@ function formatPercentage(array) {
 }
 
 console.log(formatPercentage([23, 18.103, 187.2, 0.372]));
+
+/*To be safe, they need to land on the first unnamed planet that has Oxygen levels between 19.5% and 23.5%.
+
+    Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
+
+    Some string methods that might help you here are .replace() and .substring(). 
+*/
+
+function findSafeOxygenLevel(array) {
+  let mapped = array.map((num) => parseFloat(num));
+  let found = mapped.find((num2) => num2 > 19.5 && num2 < 23.5);
+  return found + "%";
+}
+
+console.log(
+  findSafeOxygenLevel(["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"])
+);
