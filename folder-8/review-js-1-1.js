@@ -139,3 +139,17 @@ console.log(6 * "hello"); //NaN
 
 let blog = "the blog has" + likes + "likes.";
 console.log(blog);
+
+//template strings
+const title = "Best reads of 2021";
+const author = "Mamad";
+const like = 30;
+
+//concatination way
+let result8 =
+  "The blog called " + title + " by " + author + " has " + like + " likes.";
+console.log(result8);
+
+//template strings / template literals
+let result9 = `Thw blog called ${title} by ${author} has ${like} likes.`;
+console.log(result9);
