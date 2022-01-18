@@ -181,3 +181,44 @@ console.log(age2, age2 + 3, `the age is ${age2}`); //null 3 the age is null
 //null as a number => 0
 //null as a string => "null"
 //null as a boolean => false
+
+//booleans & comparisons
+console.log(true, false, "true", "false");
+
+//methods can return booleans
+let names = ["maria", "luigi", "tea"];
+
+let result10 = email.includes("@");
+console.log(result10); //true
+
+let result11 = names.includes("Ana");
+console.log(result11); //false
+
+//comparison operators
+
+console.log(age == 25); //false
+console.log(age == 30); //true
+console.log(age != 25); //true
+console.log(age > 25); //true
+console.log(age < 25); //false
+console.log(age <= 30); //true
+console.log(age >= 25); //true
+
+let name = "shaun";
+console.log(name == "shaun"); //true
+console.log(name == "Shaun"); //false
+console.log(name > "crystal"); //true //later letters are greater
+console.log(name > "Shaun"); //true //lowercases are greater
+console.log(name > "Crystal"); //true
+
+//loose comparison (different types can still be equal)
+
+console.log(age == 30); //true
+console.log(age == "30"); //true
+
+//strict comparison (different types cannot be equal)
+
+console.log(age === 30); //true
+console.log(age === "30"); //false
+console.log(age !== 30); //false
+console.log(age !== "30"); //true
