@@ -30,3 +30,14 @@ function sortedArray(arr) {
 }
 
 console.log(sortedArray(arr2));
+
+//We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+let arr3 = ["HTML", "JavaScript", "CSS"];
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+console.log(copySorted(arr3)); //[ 'CSS', 'HTML', 'JavaScript' ]
+console.log(arr3); //[ 'HTML', 'JavaScript', 'CSS' ] (no changes)
