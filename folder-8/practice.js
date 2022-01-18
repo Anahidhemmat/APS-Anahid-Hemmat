@@ -19,5 +19,14 @@ function filterRange(arr, a, b) {
   }
 }
 
-console.log(filterRange(arrayOfnumbers, 1, 4)); //removed the numbers except from 1 to 4
+filterRange(arrayOfnumbers, 1, 4); //removed the numbers except from 1 to 4
 console.log(arrayOfnumbers); //[ 3, 1 ]
+
+//write a functon that sort array in decreasing order
+let arr2 = [5, 2, 1, -10, 8];
+
+function sortedArray(arr) {
+  return arr.sort((a, b) => b - a);
+}
+
+console.log(sortedArray(arr2));
