@@ -25,3 +25,14 @@ console.log(score);
 
 //we use // for single line comments
 //we use /* */ for multi-line comments
+
+//JAVASCRIPT DATA TYPES
+//we have 7 data types
+
+//Numbers => 1, 2, 100, 3.14, -24, 0, decimal numbers, integers
+//Strings => a series of charecters in ' ' or " " => "Hello World","email"
+//Boolean => true / false values => we use them for evaluating conditions
+//Null => we can set a variable with no value => explicitly set
+//Undefined => for variables that have not been defined => automatically set
+//Objects => data structures => there are many different objects types => Arrays, functions, Dates, Literals
+//Symbol => used with objects
