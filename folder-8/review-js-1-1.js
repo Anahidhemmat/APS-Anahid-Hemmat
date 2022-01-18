@@ -36,3 +36,34 @@ console.log(score);
 //Undefined => for variables that have not been defined => automatically set
 //Objects => data structures => there are many different objects types => Arrays, functions, Dates, Literals
 //Symbol => used with objects
+
+//Strings
+console.log("Hello, world");
+
+let email = "anahidhemmat2130@gmail.com";
+console.log(email);
+
+//string concatination
+
+let firstName = "Anahid";
+let lastName = "Hemmat";
+let fullName = firstName + " " + lastName; //space is also a charecters
+console.log(fullName);
+
+//getting charecters
+console.log(fullName[0]);
+
+//string length (property)
+
+console.log(fullName.length);
+
+//string methods //functions that can do things
+//these methods do not modify the original value
+
+console.log(fullName.toUpperCase());
+
+let result = fullName.toLowerCase(); // we can store values in variables
+console.log(result);
+
+let index = email.indexOf("@");
+console.log(index); //16
