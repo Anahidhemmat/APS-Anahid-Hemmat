@@ -73,3 +73,23 @@ const jasem = {
 console.log(jasem.isLoggedIn());
 console.log(jasem.isLoggedOut());
 console.log(jasem.anna);
+
+//this keyword
+const testerObj = {
+  mehdiR: function () {
+    console.log("Silam", this);
+  },
+  AnaA: () => {
+    console.log(this);
+  },
+  nestedObj: {
+    KianaR: function () {
+      console.log(this); //nestedObj
+    },
+    KianaA: () => {
+      console.log(this); //window
+    },
+  },
+};
+testerObj.mehdiR(); //out put is testerObj
+testerObj.AnaA(); //window
