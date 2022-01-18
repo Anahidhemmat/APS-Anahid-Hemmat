@@ -40,7 +40,7 @@ console.log(score);
 //Strings
 console.log("Hello, world");
 
-let email = "anahidhemmat2130@gmail.com";
+let email = "anahidhemmat2130@gmail.com ";
 console.log(email);
 
 //string concatination
@@ -86,5 +86,15 @@ console.log(result4);
 
 //replace()
 
-let result5 = email.replace("a", "n");
+let result5 = email.replace("a", "n"); //only replaces the first a char
 console.log(result5);
+
+//replaceAll()
+
+let result6 = email.replaceAll("a", "n"); //replaces all "a"s with "n"s
+console.log(result6);
+
+//repeat()
+
+let result7 = email.repeat(2);
+console.log(result7);
