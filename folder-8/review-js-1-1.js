@@ -98,3 +98,44 @@ console.log(result6);
 
 let result7 = email.repeat(2);
 console.log(result7);
+
+//Numbers
+
+let radius = 10;
+const pi = 3.14;
+
+//math operators + , -, *, /, **, %
+
+console.log(10 / 2); //5
+
+let remainder = radius % 3;
+console.log(remainder); //1
+
+let area = pi * radius ** 2;
+console.log(area); //314
+
+//order of operation - B(brackets) I(**) D(/) M(*) A(+) S(-)
+
+let orderMatter = 5 * (10 - 3) ** 2;
+console.log(orderMatter); //245
+
+let likes = 10;
+likes = likes + 1;
+
+//shorthand notation
+likes++;
+likes--;
+likes += 10;
+likes -= 5;
+likes *= 2;
+likes /= 2;
+
+console.log(likes);
+
+//NaN - not a number
+console.log(6 * "hello"); //NaN
+
+//concatination
+
+let blog = "the blog has" + likes + "likes.";
+console.log(blog);
