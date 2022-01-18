@@ -41,3 +41,12 @@ function copySorted(arr) {
 
 console.log(copySorted(arr3)); //[ 'CSS', 'HTML', 'JavaScript' ]
 console.log(arr3); //[ 'HTML', 'JavaScript', 'CSS' ] (no changes)
+
+//You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+let users = [
+  { id: 1, name: "Anna" },
+  { id: 2, name: "Nina" },
+  { id: 3, name: "Mamad" },
+];
+let user = users.map((person) => person.name);
+console.log(user);
