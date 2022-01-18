@@ -49,4 +49,14 @@ let users = [
   { id: 3, name: "Mamad" },
 ];
 let user = users.map((person) => person.name);
-console.log(user);
+console.log(user); //[ 'Anna', 'Nina', 'Mamad' ]
+//You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users2 = [john, pete, mary];
+
+let names = users2.map((person) => person.name);
+console.log(names); //[ 'John', 'Pete', 'Mary' ]
