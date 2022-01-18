@@ -170,3 +170,14 @@ console.log(waterBoilingPoint); //60
 let myAge = 29;
 console.log(myAge++); //29
 console.log(myAge); //30
+
+//undefined
+let age1;
+console.log(age1, age1 + 3, `the age is ${age1}`); //undefined NaN the age is undefined
+//null
+let age2 = null;
+console.log(age2, age2 + 3, `the age is ${age2}`); //null 3 the age is null
+
+//null as a number => 0
+//null as a string => "null"
+//null as a boolean => false
