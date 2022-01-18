@@ -153,3 +153,20 @@ console.log(result8);
 //template strings / template literals
 let result9 = `Thw blog called ${title} by ${author} has ${like} likes.`;
 console.log(result9);
+
+//Quiz
+//What is value of score after the following code runs?
+let score2 = 5;
+score2 + 4;
+console.log(score2); //5
+
+//What is the value of waterBoilingPoint after the following code runs?
+let waterBoilingPoint = 100;
+waterBoilingPoint /= 2;
+waterBoilingPoint += 10;
+console.log(waterBoilingPoint); //60
+
+//What is the value of myAge after the following code runs?
+let myAge = 29;
+console.log(myAge++); //29
+console.log(myAge); //30
