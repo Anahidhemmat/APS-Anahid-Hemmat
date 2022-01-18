@@ -5,5 +5,19 @@ function filttered(arr, a, b) {
   return newArr;
 }
 
-console.log(filttered(arrayOfnumbers, 1, 4));
-console.log(arrayOfnumbers);
+console.log(filttered(arrayOfnumbers, 1, 4)); //[3,1]
+console.log(arrayOfnumbers); //[5, 3, 8, 1]
+
+//Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b.
+
+function filterRange(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i];
+    if (val < a || val > b) {
+      arr.splice(i, 1);
+    }
+  }
+}
+
+console.log(filterRange(arrayOfnumbers, 1, 4)); //removed the numbers except from 1 to 4
+console.log(arrayOfnumbers); //[ 3, 1 ]
