@@ -99,6 +99,13 @@ console.log(result6);
 let result7 = email.repeat(2);
 console.log(result7);
 
+//Quiz
+//change skateboard to be beard
+let quiz = "skateboard";
+
+quiz = quiz.slice(5).replace("o", "e");
+console.log(quiz); //beard
+
 //Numbers
 
 let radius = 10;
@@ -249,3 +256,26 @@ console.log(result16, typeof result16); //false boolean
 
 //number + string => string
 //number -, /, *, string => number
+
+//Math
+
+let myNum;
+//myNum = Math.round(3.5);//4
+//myNum = Math.floor(3.9); //3
+//myNum = Math.ceil(3.1);//4
+myNum = Math.pow(3, 2); //9
+myNum = Math.sqrt(64); //8
+myNum = Math.abs(-1); //1
+myNum = Math.min(1, 5, 2, 4, 3); //1
+myNum = Math.max(3, 2, 5, 4, 1); //5
+myNum = Math.PI; //constant
+myNum = Math.E; //cinstant
+
+console.log(myNum);
+
+//solve for hypotenuse of a right triangle
+let a = 4;
+let b = 3;
+
+let c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+console.log(c);
