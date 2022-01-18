@@ -222,3 +222,30 @@ console.log(age === 30); //true
 console.log(age === "30"); //false
 console.log(age !== 30); //false
 console.log(age !== "30"); //true
+
+//type conversion
+let score3 = "100";
+console.log(score3 + 1); //1001
+
+score3 = Number(score3);
+console.log(score3 + 1); //101
+
+console.log(typeof score3); //number
+
+let result12 = Number("hello");
+console.log(result12); //NaN
+
+let result13 = String(50);
+console.log(result13, typeof result13); // 50 string
+
+let result14 = Boolean(100);
+console.log(result14, typeof result14); //true boolean
+
+let result15 = Boolean(0);
+console.log(result15, typeof result15); //false boolean
+
+let result16 = Boolean("");
+console.log(result16, typeof result16); //false boolean
+
+//number + string => string
+//number -, /, *, string => number
