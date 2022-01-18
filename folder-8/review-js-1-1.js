@@ -67,3 +67,24 @@ console.log(result);
 
 let index = email.indexOf("@");
 console.log(index); //16
+
+//common string methods
+
+//lastIndexOf()
+let result2 = email.lastIndexOf("m");
+console.log(result2); //25
+
+//slice()
+
+let result3 = email.slice(0, 12);
+console.log(result3);
+
+//substr()
+
+let result4 = email.substr(4, 10); //second argument is number of charecters
+console.log(result4);
+
+//replace()
+
+let result5 = email.replace("a", "n");
+console.log(result5);
