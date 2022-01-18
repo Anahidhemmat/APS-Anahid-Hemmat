@@ -93,3 +93,84 @@ const testerObj = {
 };
 testerObj.mehdiR(); //out put is testerObj
 testerObj.AnaA(); //window
+
+//destructuring
+
+//variable destructuring
+
+// let PI = Math.PI;
+// let E = Math.E;
+// let SQET2 = Math.SQRT2;
+
+const { PI, E, SQET2 } = Math;
+console.log(PI);
+
+const myArr = ["Kiana", "Mazloom", "Ana"];
+
+const [name1, , name3] = myArr;
+console.log(name3);
+
+const scoreOfRallyRace = [3500, 3799, 4000, 8000, 8500, 9000, 12000];
+
+const [winner, second, third, ...others] = scoreOfRallyRace;
+console.log(others);
+
+//object destructuring
+
+const circle = {
+  label: "circleX",
+  radius: 2,
+};
+const circle2 = {
+  label: "mina",
+  radius: 3,
+};
+const circle3 = {
+  label: "mina",
+};
+//PI * r * r
+
+const circleArea = (obj) => {
+  return (PI * obj.radius * obj.radius).toFixed(2);
+};
+
+console.log(circleArea(circle));
+
+const circleArea2 = ({ radius }) => {
+  return (PI * radius * radius).toFixed(2);
+};
+console.log(circleArea2(circle2));
+
+const obj = {
+  ram: 16,
+  hard: 2,
+  cpu: "corei7",
+};
+
+const asgar = {
+  ram: 8,
+  hard: 128,
+  cpu: "core2",
+};
+
+const chemidoonam = ({ ram, hard, cpu }) => {
+  return `My laptop has ram of ${ram} and hard of ${hard} and cpu of ${cpu}`;
+};
+console.log(chemidoonam(asgar));
+
+//rest operator
+
+const car = {
+  cylinder: 6,
+  passengers: 4,
+  door: 2,
+  colour: "blue",
+  isFourWheelsDrive: true,
+};
+
+const { cylinder, passengers, ...others2 } = car;
+console.log(cylinder); //6
+console.log(others2);
+console.log((others2.cylinder = 4)); //cylinder is added
+console.log(others2);
+console.log(car); //didn't change
