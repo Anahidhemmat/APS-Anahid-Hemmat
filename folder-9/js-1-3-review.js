@@ -136,3 +136,41 @@ const greet = (name) => `Hey ${name}!`;
 
 console.log(greet("Harry"));
 console.log(greet("Ayda"));
+
+//Array methods
+//filter()
+//Quiz z
+//pass names that have more than 6 char
+
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+
+let v = words.filter((name) => name.length > 6);
+console.log(v);
+
+//output => array
+
+//every & some output => Boolean value
+
+//Quiz 8
+
+let allEvens = (arr) => arr.every((num) => num % 2 === 0);
+
+console.log(allEvens([2, 4, 6, 8])); //true
+console.log(allEvens([2, 1, 6, 8])); //false
+
+//reduce
+
+const prices = [9.99, 1.5, 19.99, 49.99, 30.5];
+
+let sum = prices.reduce((num1, num2) => {
+  return Math.round(num1 + num2);
+});
+
+console.log(sum);
