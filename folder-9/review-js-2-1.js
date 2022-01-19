@@ -90,3 +90,50 @@ const kittens = [kitten1, kitten2, kitten3];
 
 console.log(kittens[1].weeksOld);
 console.log(kittens[2].name);
+
+//lexical scope
+
+function jasem() {
+  const name = "jasem";
+  console.log(name);
+
+  function jasem2() {
+    const surname = "jasemian";
+    console.log(name, surname);
+
+    function jasem3() {
+      const age = 22;
+      console.log(age);
+    }
+    jasem3();
+  }
+  jasem2();
+}
+jasem();
+
+//HOC => higher order components
+
+function callTwice(funcArg) {
+  funcArg();
+  funcArg();
+}
+
+function dice() {
+  let roll = Math.floor(Math.random() * 6) + 1;
+  console.log(roll);
+}
+
+callTwice(dice);
+
+//We can write functions in objects // we call them method
+
+const myMath = {
+  sq(number) {
+    return number * 2;
+  },
+  cube: (num) => {
+    return Math.pow(num, 3);
+  },
+};
+console.log(myMath.sq(2));
+console.log(myMath.cube(3));
