@@ -50,3 +50,43 @@ let fullAddress2 = `${address}, ${city}, ${state}`;
 
 let fullAddress3 = [address, city, state, zipcode];
 console.log(...fullAddress3);
+
+//this is how we change the value of a property
+
+kitten.ageMonths = 11;
+kitten.furColour = "white";
+console.log(kitten);
+
+// lets add some properties (colours , touchScreen , owner , brand) to this object:
+
+const laptop = {
+  brand: "Lenovo",
+  screenSize: 13,
+};
+
+laptop.colours = ["white", "black", "silver"];
+laptop.owener = "Anahid";
+laptop.brand = "Apple";
+
+console.log(laptop);
+
+//we can have objects in arrays
+const kitten1 = {
+  name: "FluffySagSibil",
+  weeksOld: 2,
+};
+
+const kitten2 = {
+  name: "MegatronZakhmKhorder",
+  weeksOld: 1,
+};
+
+const kitten3 = {
+  name: "BillyNoPv",
+  weeksOld: 5,
+};
+
+const kittens = [kitten1, kitten2, kitten3];
+
+console.log(kittens[1].weeksOld);
+console.log(kittens[2].name);
