@@ -125,3 +125,14 @@ const airplanePassengers = [
 
 let result = airplanePassengers.map((p) => p.trim());
 console.log(result);
+
+//Quiz 6
+
+// Make an arrow function which
+// Greet(“Harry”) // “Hey Harry!”
+// Greet(“Ayda”) //”Hey Ayda!”
+
+const greet = (name) => `Hey ${name}!`;
+
+console.log(greet("Harry"));
+console.log(greet("Ayda"));
