@@ -36,4 +36,3 @@ function afterNYears(namesObj, nYears) {
 }
 
 console.log(afterNYears(names, 10));
-
