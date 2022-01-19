@@ -81,3 +81,47 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 for (let num of numbers) {
   console.log(num * num);
 }
+
+//Array methods
+
+//forEach()
+
+const airplane2 = [
+  ["motahare", "anahid", "amirmostafa"],
+  ["maryam", "amir", "mina"],
+  ["fatemeh", "fereshte", "kian"],
+  ["kosar", "mohammad", "yousof"],
+  ["mohsen", "hoseyn ", "shaden"],
+];
+
+let print = airplane2.forEach((row) => {
+  console.log(row);
+  row.forEach((p) => console.log(p));
+});
+
+//type of output => array/string/number
+
+//map()
+
+let pList = airplane2.map((row) => {
+  let rowOfP = row.map((p) => p.toUpperCase());
+  return rowOfP;
+});
+console.log(pList);
+
+//type of output => array
+
+//Quiz 5
+// write a function to trim all the elements inside array with map
+
+const airplanePassengers = [
+  "      Sirvan     ",
+  "      Zahra   ",
+  "   Fatemeh   ",
+  "Mohsen      ",
+  "     Azam      ",
+  "     Shirin      ",
+];
+
+let result = airplanePassengers.map((p) => p.trim());
+console.log(result);
