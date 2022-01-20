@@ -87,3 +87,42 @@ random >= 0 && random <= 9
 // };
 
 // console.log(game(myObj, answer2));
+
+//password validator
+
+function validatePasswords(passwords) {
+  let notRepeated = passwords.map((pass, index) => {
+    passwords.indexOf(pass) === index ? pass : false;
+  });
+  let isValid = notRepeated.map((pass) => {
+    containsLowercaseLetter(pass) &&
+    containsUppercaseLetter(pass) &&
+    containsNumber(pass) &&
+    containsSymbol(pass) &&
+    pass.length >= 5
+      ? true
+      : false;
+  });
+  return isValid;
+}
+console.log(validatePasswords(passes));
+
+// Returns true if string contains at least one uppercase letter.
+function containsUppercaseLetter(string) {
+  return /[A-Z]/.test(string);
+}
+
+// Returns true if string contains at least one lowercase letter.
+function containsLowercaseLetter(string) {
+  return /[a-z]/.test(string);
+}
+
+// Returns true if string contains at least one number.
+function containsNumber(string) {
+  return /[0-9]/.test(string);
+}
+
+// Returns true if string contains at least one symbol.
+function containsSymbol(string) {
+  return /[!#$%.*&]/.test(string);
+}
