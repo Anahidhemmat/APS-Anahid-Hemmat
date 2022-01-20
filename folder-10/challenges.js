@@ -76,3 +76,52 @@ function multiplyNumeric2(obj) {
 }
 
 console.log(multiplyNumeric2(menu));
+
+//When an object variable is copied, the reference is copied, but the object itself is not duplicated.
+
+//Now we have two variables, each storing a reference to the same object:
+const user2 = { id: 001, name: "Ana" };
+
+const person2 = user2; //copy the refrence
+
+//We can use either variable to access the object and modify its contents:
+
+person2.name = "Nina";
+
+console.log(user2); //name has been changed
+
+//Object Comparison by refrence
+
+let a = {};
+let b = a;
+
+console.log(a === b); //true , both variables reference the same object
+
+//but two independent objects are not equal
+// even though both are empty
+let mamad = {};
+let mamad2 = {};
+
+console.log(mamad === mamad2); //false
+
+//this is how we duplicate an object
+
+let user3 = {
+  name: "Mamal",
+  age: 30,
+};
+
+let clone = {};
+
+for (let key in user3) {
+  clone[key] = user3[key];
+}
+
+clone.name = "Kian";
+console.log(user3); //name has not changed
+
+//we can use Object.assign() to merge several objects into one
+let allUsers = { name: "unKnown" };
+Object.assign(allUsers, user, user2, user3);
+
+console.log(allUsers);
