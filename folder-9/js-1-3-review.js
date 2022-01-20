@@ -174,3 +174,24 @@ let sum = prices.reduce((num1, num2) => {
 });
 
 console.log(sum);
+
+// Create a function which checks if the bush has ALL PINK berries and is safe for the astronauts to eat from the bush.
+//   Use the tests to confirm which message to return
+
+let random = ["pink", "pink", "pink", "neon", "pink", "transparent"];
+function isBushSafe(berryArray) {
+  //Write your code here
+  let safe = (bush) => bush === "pink";
+  return berryArray.every(safe)
+    ? "Bush is safe to eat from"
+    : "Toxic! Leave bush alone!";
+}
+
+console.log(isBushSafe(random));
+
+//Create a function that returns an array of colonisers that their name starts with "A" and are part of APS
+
+function getSettlers(arr) {
+  return arr.filter((person) => person[0] === "A" && person.includes("APS"));
+};
+
