@@ -89,6 +89,7 @@ random >= 0 && random <= 9
 // console.log(game(myObj, answer2));
 
 //password validator
+let passes = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
 
 function validatePasswords(passwords) {
   let notRepeated = passwords.map((pass, index) => {
