@@ -61,3 +61,39 @@ let user5 = {
 };
 
 user5.sayHi2();
+
+//Arrays //internals
+
+let fruits = [];
+fruits[9999] = 5;
+fruits.age = 25;
+
+console.log(fruits);
+
+let array = fruits;
+console.log(fruits === array); //true
+
+array.push("orange");
+
+console.log(fruits); //is modified
+
+//Array length
+
+let randomArray = [];
+randomArray[123] = "Hi";
+console.log(randomArray.length); //124
+
+//If we increase it manually, nothing interesting happens. But if we decrease it, the array is truncated. The process is irreversible, here’s the example:
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.length = 2;
+console.log(numbers); //[1,2]
+
+numbers.length = 5; //return length back
+console.log(numbers[3]); //undefiend
+
+//we can clear the array like this:
+
+numbers.length = 0;
+console.log(numbers.length); //0
