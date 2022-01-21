@@ -85,3 +85,20 @@ const ladder2 = {
 };
 
 ladder2.up().up().up().showStep().down().showStep();
+
+//Array operations.
+
+// Let’s try 5 array operations.
+
+// Create an array styles with items “Jazz” and “Blues”.
+// Append “Rock-n-Roll” to the end.
+// Replace the value in the middle by “Classics”. Your code for finding the middle value should work for any arrays with odd length.
+// Strip off the first value of the array and show it.
+// Prepend Rap and Reggae to the array.
+
+let styles = ["Jazz", "Blues", "“Rock-n-Roll”"];
+styles[1] = "Classics";
+
+console.log(styles.shift()); //"Jazz"
+styles.unshift("Rap", "Reggae");
+console.log(styles);
