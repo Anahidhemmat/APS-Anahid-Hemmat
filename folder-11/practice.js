@@ -44,3 +44,44 @@ let calculator = {
 calculator.read(3, 2);
 console.log(calculator.sum());
 console.log(calculator.mul());
+
+//ladder object
+
+const ladder = {
+  step: 0,
+  up() {
+    return this.step++;
+  },
+  down() {
+    return this.step--;
+  },
+  showStep() {
+    return this.step;
+  },
+};
+ladder.up(); //1
+ladder.up(); //2
+ladder.up(); //3
+ladder.down(); //2
+console.log(ladder.showStep()); //2
+
+//chaining
+//Modify the code of up, down and showStep to make the calls chainable
+
+const ladder2 = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    console.log(this.step);
+    return this;
+  },
+};
+
+ladder2.up().up().up().showStep().down().showStep();
