@@ -102,3 +102,30 @@ styles[1] = "Classics";
 console.log(styles.shift()); //"Jazz"
 styles.unshift("Rap", "Reggae");
 console.log(styles);
+
+//this in array
+
+let items = ["item1", "item2"];
+
+items.push(function () {
+  //it receives this referencing the object "items" and outputs the array:
+  console.log(this);
+});
+
+items[2]();
+
+//Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+//That is: removes all dashes, each word after dash becomes uppercased.
+
+let str1 = "list-style-image";
+
+let camelize = (str) => {
+  return str
+    .split("-")
+    .map((word, index) =>
+      index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join("");
+};
+
+console.log(camelize(str1));
