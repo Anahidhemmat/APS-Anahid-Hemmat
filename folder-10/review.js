@@ -36,57 +36,57 @@ random >= 0 && random <= 9
 
 //way 2 -  object
 
-// const myObj = {
-//   positive: [
-//     "It is certain.",
-//     "It is decidedly so.",
-//     "Without a doubt.",
-//     "Yes definitely.",
-//     "You may rely on it.",
-//     " As I see it, yes.",
-//     "Most likely.",
-//     "Outlook good.",
-//     "Yes.",
-//     "Signs point to yes.",
-//   ],
-//   natural: [
-//     "Reply hazy, try again.",
-//     "Ask again later.",
-//     "Better not tell you now.",
-//     "Cannot predict now.",
-//     "Concentrate and ask again.",
-//   ],
-//   negetive: [
-//     "Don't count on it.",
-//     "My reply is no.",
-//     "My sources say no.",
-//     "Outlook not so good.",
-//     "Very doubtful.",
-//   ],
-// };
+const myObj = {
+  positive: [
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes definitely.",
+    "You may rely on it.",
+    " As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Yes.",
+    "Signs point to yes.",
+  ],
+  natural: [
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now.",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+  ],
+  negetive: [
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good.",
+    "Very doubtful.",
+  ],
+};
 
-// const { positive, natural, negetive } = myObj;
+const { positive, natural, negetive } = myObj;
 
-// const array = [positive, natural, negetive];
+const array = [positive, natural, negetive];
 
-// let randomNum1 = Math.floor(Math.round() * array.length);
-// let randomNum2 = Math.floor(Math.round() * array[randomNum1].length);
+let randomNum1 = Math.floor(Math.random() * array.length);
+let randomNum2 = Math.floor(Math.random() * array[randomNum1].length);
 
-// let answer2 = array[randomNum1][randomNum2];
+let answer2 = array[randomNum1][randomNum2];
 
-// const game = (Obj, randomAnswer) => {
-//   const { positive, natural, negetive } = obj;
-//   let check = positive.includes(randomAnswer)
-//     ? `${randomAnswer} - POSITIVE`
-//     : natural.includes(randomAnswer)
-//     ? `${randomAnswer} - NATURAL`
-//     : negetive.includes(randomAnswer)
-//     ? `${randomAnswer} - POSITIVE`
-//     : "Nothing";
-//   return check;
-// };
+const game = (obj, randomAnswer) => {
+  const { positive, natural, negetive } = obj;
+  let check = positive.includes(randomAnswer)
+    ? `${randomAnswer} - POSITIVE`
+    : natural.includes(randomAnswer)
+    ? `${randomAnswer} - NATURAL`
+    : negetive.includes(randomAnswer)
+    ? `${randomAnswer} - POSITIVE`
+    : "Nothing";
+  return check;
+};
 
-// console.log(game(myObj, answer2));
+console.log(game(myObj, answer2));
 
 //password validator
 let passes = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
