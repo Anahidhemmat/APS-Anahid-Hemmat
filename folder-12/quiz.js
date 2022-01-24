@@ -90,11 +90,28 @@ Write JavaScript below that logs:
 //set it's text alignment to center
 //give the image a width of 150px and a border radius of 50%
 
-const selectDiv = document.querySelector("#container");
+// const selectDiv = document.querySelector("#container");
 
-selectDiv.style.textAlign = "center";
+// selectDiv.style.textAlign = "center";
 
-const image = document.querySelector("#container img");
+// const image = document.querySelector("#container img");
 
-image.style.width = "150px";
-image.style.borderRadius = "50%";
+// image.style.width = "150px";
+//image.style.borderRadius = "50%";
+
+//Quiz 6
+
+//please write some JS codes to make the rainbow colored
+//use this array of colors:
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]; //PLEASE DON'T CHANGE THIS LINE!
+//your task is to select all spans, iterate over them, assign them each one of the colors from the colors array.
+//the first span should be red, second one orange and so on.
+//YOU CODE GOES HERE:
+
+const spanTags = document.querySelectorAll("span");
+
+let count = 0;
+for (let span of spanTags) {
+  span.style.color = colors[count];
+  count++;
+}
