@@ -75,11 +75,26 @@ Write JavaScript below that logs:
 // change the url to: 'https://ctl.s6img.com/society6/img/6KLGBRmtYG8sc6vShMmCzkIBuVc/w_1500/posters/top/~artwork,fw_2718,fh_3619,fx_-14,fy_162,iw_2745,ih_3294/s6-original-art-uploads/society6/uploads/misc/25b61819b78d4267ae26919e142ac513/~~/youre-eggzactly-my-type-funny-egg-pun-posters.jpg'
 //change the alt text to: "chicken"
 
-const image = document.querySelector("img");
+// const image = document.querySelector("img");
 
-image.setAttribute(
-  "src",
-  "https://ctl.s6img.com/society6/img/6KLGBRmtYG8sc6vShMmCzkIBuVc/w_1500/posters/top/~artwork,fw_2718,fh_3619,fx_-14,fy_162,iw_2745,ih_3294/s6-original-art-uploads/society6/uploads/misc/25b61819b78d4267ae26919e142ac513/~~/youre-eggzactly-my-type-funny-egg-pun-posters.jpg"
-);
-image.setAttribute("alt", "chiken");
-console.log(image);
+// image.setAttribute(
+//   "src",
+//   "https://ctl.s6img.com/society6/img/6KLGBRmtYG8sc6vShMmCzkIBuVc/w_1500/posters/top/~artwork,fw_2718,fh_3619,fx_-14,fy_162,iw_2745,ih_3294/s6-original-art-uploads/society6/uploads/misc/25b61819b78d4267ae26919e142ac513/~~/youre-eggzactly-my-type-funny-egg-pun-posters.jpg"
+// );
+// image.setAttribute("alt", "chiken");
+// console.log(image);
+
+//Quiz 5
+
+//select the div with the id of container
+//set it's text alignment to center
+//give the image a width of 150px and a border radius of 50%
+
+const selectDiv = document.querySelector("#container");
+
+selectDiv.style.textAlign = "center";
+
+const image = document.querySelector("#container img");
+
+image.style.width = "150px";
+image.style.borderRadius = "50%";
