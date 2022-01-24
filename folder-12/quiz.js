@@ -32,14 +32,27 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 */
 
-const allPara = document.querySelectorAll("p");
-console.log(allPara);
+// const allPara = document.querySelectorAll("p");
+// console.log(allPara);
 
-const firstDiv = document.querySelector("div");
-console.log(firstDiv);
+// const firstDiv = document.querySelector("div");
+// console.log(firstDiv);
 
-const elementWithId = document.querySelector("#jumbotron-text");
-console.log(firstDiv);
+// const elementWithId = document.querySelector("#jumbotron-text");
+// console.log(firstDiv);
 
-const allParaInClass = document.querySelectorAll(".primary-content p");
-console.log(allParaInClass);
+// const allParaInClass = document.querySelectorAll(".primary-content p");
+// console.log(allParaInClass);
+
+//Quiz 3
+// change the word Delicious to Disgusting
+
+const word = document.querySelector("span");
+word.innerText = "<mark>Disgusting</mark>";
+
+const selectDiv = document.querySelector("div");
+
+selectDiv.textContent = "welcome to my site<b>Happy</b>";
+
+selectDiv.innerHTML = "Welcome To <b>Anahid</b>'s Page";
+console.log(selectDiv);
