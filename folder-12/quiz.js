@@ -56,3 +56,17 @@ selectDiv.textContent = "welcome to my site<b>Happy</b>";
 
 selectDiv.innerHTML = "Welcome To <b>Anahid</b>'s Page";
 console.log(selectDiv);
+
+//Attribute Selector
+//first way
+const input = document.querySelector("input");
+//setAttribute() //second way
+input.setAttribute("name", "myinput");
+input.setAttribute("id", "my-inp");
+
+//getAttribute
+const getNameAtt = input.getAttribute("name"); //myinput
+console.log(getNameAtt);
+
+const getIdAtt = input.getAttribute("id");
+console.log(getIdAtt);
