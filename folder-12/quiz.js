@@ -108,18 +108,57 @@ const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 //the first span should be red, second one orange and so on.
 //YOU CODE GOES HERE:
 
-const spanTags = document.querySelectorAll("span");
+// const spanTags = document.querySelectorAll("span");
 
-let count = 0;
-for (let span of spanTags) {
-  span.style.color = colors[count];
-  count++;
+// let count = 0;
+// for (let span of spanTags) {
+//   span.style.color = colors[count];
+//   count++;
+// }
+
+// const heading = document.querySelector("h1");
+
+// // let styles = heading.style;
+// // console.log(styles);
+
+// let styles2 = window.getComputedStyle(heading);
+// console.log(styles2);
+
+//classList
+
+const div = document.createElement("div");
+div.className = "foo";
+
+console.log(div);
+//we can add or remove multiple classe
+div.classList.remove("foo"); //will remove class "foo"
+div.classList.add("newClass", "sth"); // will add "newClass"
+
+//// if "visible" class is set remove it, otherwise add it
+div.classList.toggle("visible");
+
+console.log(div.outerHTML);
+
+console.log(div.classList.contains("foo")); //false
+console.log(div.classList.contains("visible")); //true
+//replace
+div.classList.replace("sth", "container");
+
+console.log(div.outerHTML);
+
+////in quiz7.html you will find 6 li elements, two of which have the 'highlight' class applied to them.
+
+// 1-please use JS and classList property to invert which elements have the highlight class.
+//basically iterate over all the li elements and toggle the class of highlight on each one.
+
+// = your end result will be all blue ish ones will be purple, and all purples will be blue :)
+//2- please as second exercise add class of highlight to the elements which they exclude this class
+//you code goes here:
+
+const list = document.querySelectorAll("li");
+
+for (let li of list) {
+  li.classList.toggle("highlight");
+  // li.classList.remove("blue").classList.add("purple");
+  // li.classList.remove("purple").classList.add("blue");
 }
-
-const heading = document.querySelector("h1");
-
-// let styles = heading.style;
-// console.log(styles);
-
-let styles2 = window.getComputedStyle(heading);
-console.log(styles2);

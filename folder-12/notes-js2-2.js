@@ -72,3 +72,10 @@ const text = (document.getElementById("divA").textContent =
 // The Window.getComputedStyle() method returns an object containing the values
 // of all CSS properties of an element, after applying active stylesheets and resolving
 //  any basic computation those values may contain.
+
+//The Element.classList
+//is a read-only property that returns a live DOMTokenList collection of the class
+//attributes of the element. This can then be used to manipulate the class list.
+
+//syntax
+//const elementClasses = elementNodeReference.classList;
