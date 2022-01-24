@@ -59,3 +59,9 @@ const text = (document.getElementById("divA").textContent =
 //innerHTML
 //The Element property innerHTML gets or sets the HTML or XML markup contained within the element.
 //This lets you look at the HTML markup of the element's content nodes.
+
+//HTMLElement.style
+// The style read-only property returns the inline style of an element in the
+//  form of a CSSStyleDeclaration object that contains a list of all styles properties
+//  for that element with values assigned for the attributes that are defined in the
+//  element's inline style attribute.
