@@ -18,10 +18,10 @@
 //so you can group multiple selectors in a single query.
 
 //To select all paragraph (p) elements in a document whose classes include warning or note, you can do the following:
-const special = document.querySelectorAll("p.warning, p.note");
+// const special = document.querySelectorAll("p.warning, p.note");
 
-//You can also query by ID. For example:
-const special2 = document.querySelector("#main, #basic, #exclamation");
+// //You can also query by ID. For example:
+// const special2 = document.querySelector("#main, #basic, #exclamation");
 
 //DOM properties and methods
 
@@ -44,7 +44,8 @@ const special2 = document.querySelector("#main, #basic, #exclamation");
 //  but textContent has better performance because its value is not parsed as HTML.
 
 //Example
-<div id="divA">
+{
+  /* <div id="divA">
   This is <span>some</span> text!
 </div>;
 
@@ -52,7 +53,8 @@ const text = document.getElementById("divA").textContent;
 // The text variable is now: 'This is some text!'
 
 const text = (document.getElementById("divA").textContent =
-  "This text is different!");
+  "This text is different!"); */
+}
 // The HTML for divA is now:
 // <div id="divA">This text is different!</div>
 
@@ -65,3 +67,8 @@ const text = (document.getElementById("divA").textContent =
 //  form of a CSSStyleDeclaration object that contains a list of all styles properties
 //  for that element with values assigned for the attributes that are defined in the
 //  element's inline style attribute.
+
+// Window.getComputedStyle()
+// The Window.getComputedStyle() method returns an object containing the values
+// of all CSS properties of an element, after applying active stylesheets and resolving
+//  any basic computation those values may contain.

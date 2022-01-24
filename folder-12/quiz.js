@@ -115,3 +115,11 @@ for (let span of spanTags) {
   span.style.color = colors[count];
   count++;
 }
+
+const heading = document.querySelector("h1");
+
+// let styles = heading.style;
+// console.log(styles);
+
+let styles2 = window.getComputedStyle(heading);
+console.log(styles2);
