@@ -47,26 +47,39 @@ Write JavaScript below that logs:
 //Quiz 3
 // change the word Delicious to Disgusting
 
-const word = document.querySelector("span");
-word.innerText = "<mark>Disgusting</mark>";
+// const word = document.querySelector("span");
+// word.innerText = "<mark>Disgusting</mark>";
 
-const selectDiv = document.querySelector("div");
+// const selectDiv = document.querySelector("div");
 
-selectDiv.textContent = "welcome to my site<b>Happy</b>";
+// selectDiv.textContent = "welcome to my site<b>Happy</b>";
 
-selectDiv.innerHTML = "Welcome To <b>Anahid</b>'s Page";
-console.log(selectDiv);
+// selectDiv.innerHTML = "Welcome To <b>Anahid</b>'s Page";
+// console.log(selectDiv);
 
-//Attribute Selector
-//first way
-const input = document.querySelector("input");
-//setAttribute() //second way
-input.setAttribute("name", "myinput");
-input.setAttribute("id", "my-inp");
+// //Attribute Selector
+// //first way
+// const input = document.querySelector("input");
+// //setAttribute() //second way
+// input.setAttribute("name", "myinput");
+// input.setAttribute("id", "my-inp");
 
-//getAttribute
-const getNameAtt = input.getAttribute("name"); //myinput
-console.log(getNameAtt);
+// //getAttribute
+// const getNameAtt = input.getAttribute("name"); //myinput
+// console.log(getNameAtt);
 
-const getIdAtt = input.getAttribute("id");
-console.log(getIdAtt);
+// const getIdAtt = input.getAttribute("id");
+// console.log(getIdAtt);
+
+//Quiz 4
+// change the url to: 'https://ctl.s6img.com/society6/img/6KLGBRmtYG8sc6vShMmCzkIBuVc/w_1500/posters/top/~artwork,fw_2718,fh_3619,fx_-14,fy_162,iw_2745,ih_3294/s6-original-art-uploads/society6/uploads/misc/25b61819b78d4267ae26919e142ac513/~~/youre-eggzactly-my-type-funny-egg-pun-posters.jpg'
+//change the alt text to: "chicken"
+
+const image = document.querySelector("img");
+
+image.setAttribute(
+  "src",
+  "https://ctl.s6img.com/society6/img/6KLGBRmtYG8sc6vShMmCzkIBuVc/w_1500/posters/top/~artwork,fw_2718,fh_3619,fx_-14,fy_162,iw_2745,ih_3294/s6-original-art-uploads/society6/uploads/misc/25b61819b78d4267ae26919e142ac513/~~/youre-eggzactly-my-type-funny-egg-pun-posters.jpg"
+);
+image.setAttribute("alt", "chiken");
+console.log(image);
