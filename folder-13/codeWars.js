@@ -40,4 +40,14 @@ function differenceInAges(ages) {
   newArr.push(youngest, oldest, difference);
   return newArr;
 }
-console.log(differenceInAges(array));
+console.log(differenceInAges(array)); //[ 6, 82, 76 ]
+
+//another solution for function above
+
+function differenceInAges2(ages2) {
+  let min = Math.min(...ages2);
+  let max = Math.max(...ages2);
+  return [min, max, max - min];
+}
+
+console.log(differenceInAges2(array)); //[ 6, 82, 76 ]
