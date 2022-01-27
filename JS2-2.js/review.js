@@ -75,3 +75,17 @@ const updateUser = {
 };
 
 //console.log(updateUser);
+
+//rest operator
+
+// function sum(a, b, c, d) {
+//   return arguments.reduce((acc, curr) => acc + curr);
+// }
+
+// console.log(sum(2, 3, 4, 5));
+
+function sum(...nums) {
+  return nums.reduce((acc, curr) => acc + curr);
+}
+//rest operator datayi ke behesh midim ro tabdil be array mikone
+console.log(sum(1, 2, 3, 4, 5, 6, 7));
