@@ -123,3 +123,28 @@ const todos = [
 ];
 
 todoList(todos);
+
+/////////////////
+
+function listOfColours(colours) {
+  // Write your code here...
+  let content = document.querySelector("#content");
+  let p = document.createElement("p");
+  content.append(p);
+  let select = document.createElement("select");
+  content.append(select);
+  for(let i = 0; i < colours.length; i++) {
+    let option = document.createElement("option");
+    option.textContent = colours[i];
+    select.append(option);
+    select.addEventListener("click", function() {
+      p.textContent = "You have selected: " + option.textContent; 
+    })
+  };
+  
+}
+
+const colours = ["red", "blue", "green", "yellow", "pink", "brown"];
+
+listOfColours(colours);
+
