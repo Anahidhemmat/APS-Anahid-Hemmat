@@ -93,3 +93,33 @@ const books = [
 ]
 
 readingList(books)
+
+///////////////
+
+function todoList(todos) {
+  // Write your code here...
+  let content = document.querySelector("#content");
+  let ul = document.createElement("ul");
+  content.append(ul);
+  for(let i = 0; i < todos.length; i++) {
+    let li = document.createElement("li");
+    li.textContent = todos[i].todo;
+    ul.append(li);
+    li.addEventListener("click",function() {
+     if( li.style.textDecoration === "none") {
+      li.style.textDecoration = "line-through";
+     } else {
+      li.style.textDecoration = "none";
+     }
+    });
+  }
+}
+
+const todos = [
+  {todo: "wash the dishes"}, 
+  {todo: "walk the dog"}, 
+  {todo: "learn javascript"}, 
+  {todo: "go shopping"}
+];
+
+todoList(todos);
