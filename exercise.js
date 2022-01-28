@@ -40,3 +40,56 @@ function shoppingList(arrayOfPeople) {
 let shopping = ["Milk", "Bread", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"]
 
 shoppingList(shopping);
+
+
+///////////////
+
+function readingList(books) {
+  // Write your code here...
+  let content = document.querySelector("#content");
+  let h1 = document.createElement("h1");
+  h1.textContent = "Book List";
+  content.append(h1)
+  let ul = document.createElement("ul");
+  content.append(ul);
+  ul.style.listStyle = "none";
+
+  for(let i = 0; i < books.length; i++) {
+    let li = document.createElement("li");
+    let p = document.createElement("p");
+    p.textContent = books[i].title + "-" + books[i].author;
+    li.append(p);
+    ul.append(li);
+
+    
+
+  let imageSrc = ["data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…jo9Pq/uGZhqozRRR+jo9Pq/uGZkWNFFFdVGhTUbJfuRbdz//Z", "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…ERFkEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/9k=","data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…RAREQEREAYiICIiAiIgRJiICIiAgxECBJiICIiAiIgRERA//Z"];
+    let image = document.createElement("img");
+    for(let srcs of imageSrc) {
+      image.src = srcs;
+    }
+    li.append(image);
+
+  }
+
+}
+
+const books = [
+  {
+    title: "The Design of Everyday Things",
+    author: "Don Norman",
+    alreadyRead: false,
+  },
+  {
+    title: "The Most Human Human",
+    author: "Brian Christian",
+    alreadyRead: true,
+  },
+  {
+    title: "The Pragmatic Programmer",
+    author: "Andrew Hunt",
+    alreadyRead: true,
+  },
+]
+
+readingList(books)
