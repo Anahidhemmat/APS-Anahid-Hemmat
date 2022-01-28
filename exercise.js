@@ -23,3 +23,20 @@ listOfNames(people);
 
 
 ///////////////////////////////
+
+function shoppingList(arrayOfPeople) {
+  // Write your code here...
+  let content = document.querySelector("#content");
+  let unorderedList = document.createElement("ul");
+  content.append(unorderedList);
+
+  for ( let i = 0; i < arrayOfPeople.length; i++) {
+    let itemList = document.createElement("li");
+    itemList.textContent = arrayOfPeople[i];
+    unorderedList.append(itemList);
+  }
+}
+
+let shopping = ["Milk", "Bread", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"]
+
+shoppingList(shopping);
