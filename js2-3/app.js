@@ -70,3 +70,35 @@
 // });
 
 // console.log("end");
+
+//promise version
+
+function loginUser(email, password) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Now we have the data");
+      resolve({ userEmail: email });
+    }, 3000);
+  });
+}
+
+function getUsersVideos(email) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(["video1", "video2", "video3"]);
+    }, 2000);
+  });
+}
+
+function getVideoDetails(video) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Title of the video");
+    }, 1000);
+  });
+}
+
+loginUser("anahid@gmail.com", 2139)
+  .then((user) => getUsersVideos(user.email))
+  .then((videos) => getVideoDetails(videos[0]))
+  .then((detail) => console.log(detail));
