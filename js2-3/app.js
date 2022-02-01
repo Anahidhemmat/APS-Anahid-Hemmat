@@ -98,7 +98,22 @@ function getVideoDetails(video) {
   });
 }
 
-loginUser("anahid@gmail.com", 2139)
-  .then((user) => getUsersVideos(user.email))
-  .then((videos) => getVideoDetails(videos[0]))
-  .then((detail) => console.log(detail));
+// loginUser("anahid@gmail.com", 2139)
+//   .then((user) => getUsersVideos(user.email))
+//   .then((videos) => getVideoDetails(videos[0]))
+//   .then((detail) => console.log(detail));
+
+//SYNC
+
+async function displayUser() {
+  try {
+    const loggedUser = await loginUser("Ana", "A22");
+    const videos = await getUsersVideos(loginUser.userEmail);
+    const detail = await getVideoDetails(videos[0]);
+    console.log(detail);
+  } catch {
+    console.log("Error");
+  }
+}
+
+displayUser();
