@@ -15,27 +15,20 @@ you should follow the below steps:
 
 const form = document.querySelector("form");
 const ul = document.querySelector("#list");
-
-const addProduct = (product, quantity) => {
-  const li = document.createElement("li");
-  li.append(product, ` - ${quantity}`);
-  ul.append(li);
-};
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const productInput = e.target.product.value;
-  const quantityInput = e.target.qty.value;
+  const productValue = e.target.product.value;
+  const quantityValue = e.target.qty.value;
 
-  if (!productInput || !quantityInput) {
-    alert("Enter product");
-    return;
-  } else {
-    addProduct(productInput, quantityInput);
+  addProduct(productValue, quantityValue);
 
-    //khali krdn input in form
-    e.target.product.value = "";
-    e.target.qty.value = "";
-  }
+  e.target.product.value = "";
+  e.target.qty.value = "";
 });
+
+const addProduct = (product, quantity) => {
+  const li = document.createElement("li");
+  li.append(`${product} - ${quantity}`);
+  ul.append(li);
+};
