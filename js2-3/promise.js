@@ -28,18 +28,61 @@
 //   });
 
 //promise.all
-const yt = new Promise((resolve) => {
+// const yt = new Promise((resolve) => {
+//   setTimeout(() => {
+//     console.log("getting stuff from youtube");
+//     resolve({ videos: [1, 2, 3, 4, 5] });
+//   }, 2000);
+// });
+
+// const fb = new Promise((resolve) => {
+//   setTimeout(() => {
+//     console.log("getting stuff from facebook");
+//     resolve({ user: "Name" });
+//   }, 3000);
+// });
+
+// Promise.all([yt, fb]).then((result) => console.log(result));
+
+//promise
+
+//resolve
+let promise = new Promise(function (resolve, reject) {
   setTimeout(() => {
-    console.log("getting stuff from youtube");
-    resolve({ videos: [1, 2, 3, 4, 5] });
-  }, 2000);
+    resolve("done");
+  }, 1000);
 });
 
-const fb = new Promise((resolve) => {
+//reject
+
+let promise2 = new Promise(function (resolve, reject) {
   setTimeout(() => {
-    console.log("getting stuff from facebook");
-    resolve({ user: "Name" });
-  }, 3000);
+    reject(new Error("Whooops"));
+  }, 1000);
 });
 
-Promise.all([yt, fb]).then((result) => console.log(result));
+//Immediately calling resolve/reject
+
+let promise3 = new Promise(function (resolve, reject) {
+  resolve("done");
+});
+
+//.then()
+
+promise.then(
+  function (result) {},
+  function (error) {}
+);
+
+promise.then(
+  (result) => console.log(result),
+  (error) => console.log(error)
+);
+
+//.catch()
+
+promise2.catch(error);
+
+//or
+
+promise2.then(null, (error) => console.log(error));
