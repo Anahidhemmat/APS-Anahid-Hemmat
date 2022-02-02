@@ -86,3 +86,24 @@ promise2.catch(error);
 //or
 
 promise2.then(null, (error) => console.log(error));
+
+//example
+
+const loadScript = (src) => {
+  return new Promise((resolve, reject) => {
+    let script = document.createElement("script");
+    script.src = src;
+
+    script.onload = () => resolve(script);
+    script.onerror = () => reject(new Error(`Script load error for ${src}`));
+
+    document.head.append(script);
+  });
+};
+
+let promise4 = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js");
+
+promise4.then(
+  (script) => console.log("here is your src  =>", script),
+  (error) => console.log(error.massage)
+);
