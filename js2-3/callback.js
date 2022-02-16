@@ -74,8 +74,32 @@
 // getPosts();
 // createPosts({ title: "Post three", body: "This is post three" });
 
-//async with callback
+// //async with callback
+// const posts = [
+//   { title: "Post One", body: "This is post one" },
+//   { title: "Post two", body: "This is post two" },
+// ];
 
+// function getPosts() {
+//   setTimeout(() => {
+//     let output = "";
+//     posts.forEach((post) => {
+//       output += `<li>${post.title}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// function createPosts(post, callback) {
+//   setTimeout(() => {
+//     posts.push(post);
+//     callback();
+//   }, 2000);
+// }
+
+// createPosts({ title: "Post three", body: "This is post three" }, getPosts);
+
+//async with Promises
 const posts = [
   { title: "Post One", body: "This is post one" },
   { title: "Post two", body: "This is post two" },
@@ -91,11 +115,21 @@ function getPosts() {
   }, 1000);
 }
 
-function createPosts(post, callback) {
-  setTimeout(() => {
-    posts.push(post);
-    callback();
-  }, 2000);
+function createPosts(post) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      posts.push(post);
+
+      const error = false;
+      if (!error) {
+        resolve("We got the posts");
+      } else {
+        reject("Error, sth went wrong");
+      }
+    }, 2000);
+  });
 }
 
-createPosts({ title: "Post three", body: "This is post three" }, getPosts);
+createPosts({ title: "Post three", body: "This is post three" })
+  .then(getPosts)
+  .catch((err) => console.log(err));
