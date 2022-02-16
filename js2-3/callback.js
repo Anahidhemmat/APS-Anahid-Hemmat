@@ -138,12 +138,22 @@ function createPosts(post) {
 
 //async & await
 
-async function init() {
-  await createPosts({ title: "Post three", body: "This is post three" });
-  getPosts();
+// async function init() {
+//   await createPosts({ title: "Post three", body: "This is post three" });
+//   getPosts();
+// }
+
+// init();
+
+//async & await with fetch
+
+async function fetchDta() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/ ");
+  const data = await res.json(); //string => object
+  console.log(data);
 }
 
-init();
+fetchDta();
 
 //Promise.all()
 
