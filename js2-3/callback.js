@@ -145,12 +145,26 @@ function createPosts(post) {
 
 // init();
 
-//async & await with fetch
+// //async & await with fetch
+
+// async function fetchDta() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/todos/ ");
+//   const data = await res.json(); //string => object
+//   console.log(data);
+// }
+
+// fetchDta();
+
+//async & await with fetch + try & catch
 
 async function fetchDta() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos/ ");
-  const data = await res.json(); //string => object
-  console.log(data);
+  try {
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos/ ");
+    const data = await res.json(); //string => object
+    console.log(data);
+  } catch {
+    throw new Error("Can't access to data");
+  }
 }
 
 fetchDta();
