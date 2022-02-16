@@ -1,0 +1,41 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.purple {
+  color: purple;
+}
+.border {
+  border: 2px solid green;
+}
+.blue {
+  color: lightblue;
+}
+
+#banner {
+  width: 100%;
+}
+#newBanner {
+  width: 80%;
+}
+img.square {
+  width: 400px;
+  object-fit: cover;
+  height: 400px;
+}
+
+#toc {
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  display: table;
+  padding: 1em;
+}
+
+#toc a {
+  text-decoration: none;
+}
+
+.tocnumber {
+  color: black;
+}
