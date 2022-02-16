@@ -39,3 +39,13 @@ const people = ["Mario", "Anna", "Kiana"];
 people.forEach((person) => {
   content.innerHTML += `<p>${person}</p>`;
 });
+
+//accessing attributes
+
+const link = document.querySelector("a");
+
+link.setAttribute("href", "https://www.netninja");
+ 
+console.log(link.getAttribute("href"));
+
+link.innerText = "Net ninja website";
