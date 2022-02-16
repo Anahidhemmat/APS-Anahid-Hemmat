@@ -51,3 +51,4 @@ function differenceInAges2(ages2) {
 }
 
 console.log(differenceInAges2(array)); //[ 6, 82, 76 ]
+
