@@ -50,6 +50,32 @@
 
 //crash course
 
+//sync
+// const posts = [
+//   { title: "Post One", body: "This is post one" },
+//   { title: "Post two", body: "This is post two" },
+// ];
+
+// function getPosts() {
+//   setTimeout(() => {
+//     let output = "";
+//     posts.forEach((post) => {
+//       output += `<li>${post.title}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// function createPosts(post) {
+//   setTimeout(() => {
+//     posts.push(post);
+//   }, 2000);
+// }
+// getPosts();
+// createPosts({ title: "Post three", body: "This is post three" });
+
+//async with callback
+
 const posts = [
   { title: "Post One", body: "This is post one" },
   { title: "Post two", body: "This is post two" },
@@ -65,10 +91,11 @@ function getPosts() {
   }, 1000);
 }
 
-function createPosts(post) {
+function createPosts(post, callback) {
   setTimeout(() => {
     posts.push(post);
+    callback();
   }, 2000);
 }
-getPosts();
-createPosts({ title: "Post three", body: "This is post three" });
+
+createPosts({ title: "Post three", body: "This is post three" }, getPosts);
