@@ -21,20 +21,50 @@
 // //send();
 // request.send();
 
-//CALLBACK VERSION =>async
+//CALLBACK VERSION => async
+
+// const getTodos = (callback) => {
+//   const request = new XMLHttpRequest();
+
+//   request.addEventListener("readystatechange", () => {
+//     if (request.readyState === 4 && request.status === 200) {
+//       //JSON
+//       const data = JSON.parse(request.statusText);
+//       callback(undefined, data);
+//     } else if (request.readyState === 4) {
+//       callback("could not fetch the data", undefined);
+//     }
+//   });
+
+//   request.open("GET", "https://jsonplaceholder.typicode.com/todos/ ");
+//   request.send();
+// };
+
+// getTodos((err, data) => {
+//   console.log("callback fired");
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(data);
+//   }
+// });
+
+//JSON
 
 const getTodos = (callback) => {
   const request = new XMLHttpRequest();
 
   request.addEventListener("readystatechange", () => {
     if (request.readyState === 4 && request.status === 200) {
-      callback(undefined, request.statusText);
+      //JSON
+      const data = JSON.parse(request.responseText);
+      callback(undefined, data);
     } else if (request.readyState === 4) {
       callback("could not fetch the data", undefined);
     }
   });
 
-  request.open("GET", "https://jsonplaceholder.typicode.com/todos/ ");
+  request.open("GET", "todos.json");
   request.send();
 };
 
