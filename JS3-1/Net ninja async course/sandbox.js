@@ -181,10 +181,19 @@
 //returns promise
 const getData = async () => {
   const response = await fetch("jsons/users.json"); //fetch API
+
+  if (response.status !== 200) {
+    //throw our own error
+    throw new Error("Could not fetch the data");
+  }
   const data = await response.json(); //returns promise
   return data;
 };
 
-getData().then((data) => {
-  console.log("resolved", data);
-});
+getData()
+  .then((data) => {
+    console.log("resolved:", data);
+  })
+  .catch((err) => {
+    console.log("rejected:", err.message);
+  });
