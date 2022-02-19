@@ -126,38 +126,52 @@
 
 //PROMISE VERSION => async
 
-const getTodos = (url) => {
-  return new Promise((resolve, reject) => {
-    const request = new XMLHttpRequest();
+// const getTodos = (url) => {
+//   return new Promise((resolve, reject) => {
+//     const request = new XMLHttpRequest();
 
-    request.addEventListener("readystatechange", () => {
-      if (request.readyState === 4 && request.status === 200) {
-        //JSON
-        const data = JSON.parse(request.responseText);
-        resolve(data);
-      } else if (request.readyState === 4) {
-        reject("error getting data");
-      }
-    });
+//     request.addEventListener("readystatechange", () => {
+//       if (request.readyState === 4 && request.status === 200) {
+//         //JSON
+//         const data = JSON.parse(request.responseText);
+//         resolve(data);
+//       } else if (request.readyState === 4) {
+//         reject("error getting data");
+//       }
+//     });
 
-    request.open("GET", url);
-    request.send();
-  });
-};
+//     request.open("GET", url);
+//     request.send();
+//   });
+// };
 
-//chaning promises
-getTodos("jsons/books.json")
-  .then((data) => {
-    console.log("Data 1 recived:", data);
-    return getTodos("jsons/users.json");
+// //chaning promises
+// getTodos("jsons/books.json")
+//   .then((data) => {
+//     console.log("Data 1 recived:", data);
+//     return getTodos("jsons/users.json");
+//   })
+//   .then((data) => {
+//     console.log("Data 2 recived:", data);
+//     return getTodos("jsons/todos.json");
+//   })
+//   .then((data) => {
+//     console.log("Data 3 recived:", data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+//fetch API
+
+fetch("jsons/users.json")
+  .then((response) => {
+    console.log("resolved", response); //returns an object
+    return response.json(); //returns promise
   })
   .then((data) => {
-    console.log("Data 2 recived:", data);
-    return getTodos("jsons/todos.json");
-  })
-  .then((data) => {
-    console.log("Data 3 recived:", data);
+    console.log(data); //getting data
   })
   .catch((err) => {
-    console.log(err);
+    console.log("rejected"); //catching error
   });
