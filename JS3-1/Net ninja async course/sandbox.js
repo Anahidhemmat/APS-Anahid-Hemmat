@@ -164,14 +164,27 @@
 
 //fetch API
 
-fetch("jsons/users.json")
-  .then((response) => {
-    console.log("resolved", response); //returns an object
-    return response.json(); //returns promise
-  })
-  .then((data) => {
-    console.log(data); //getting data
-  })
-  .catch((err) => {
-    console.log("rejected"); //catching error
-  });
+// fetch("jsons/users.json")
+//   .then((response) => {
+//     console.log("resolved", response); //returns an object
+//     return response.json(); //returns promise
+//   })
+//   .then((data) => {
+//     console.log(data); //getting data
+//   })
+//   .catch((err) => {
+//     console.log("rejected"); //catching error
+//   });
+
+//async & await
+
+//returns promise
+const getData = async () => {
+  const response = await fetch("jsons/users.json"); //fetch API
+  const data = await response.json(); //returns promise
+  return data;
+};
+
+getData().then((data) => {
+  console.log("resolved", data);
+});
