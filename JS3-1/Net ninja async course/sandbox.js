@@ -145,9 +145,18 @@ const getTodos = (url) => {
   });
 };
 
+//chaning promises
 getTodos("jsons/books.json")
   .then((data) => {
-    console.log("Data recived:", data);
+    console.log("Data 1 recived:", data);
+    return getTodos("jsons/users.json");
+  })
+  .then((data) => {
+    console.log("Data 2 recived:", data);
+    return getTodos("jsons/todos.json");
+  })
+  .then((data) => {
+    console.log("Data 3 recived:", data);
   })
   .catch((err) => {
     console.log(err);
