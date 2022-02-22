@@ -135,3 +135,13 @@ function factorialize(num) {
 }
 
 factorialize(5);
+
+//Find the Longest Word in a String
+function findLongestWordLength(str) {
+  return str.split(" ").reduce((long, word) => {
+    console.log(long);
+    return Math.max(long, word.length);
+  }, 0);
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
