@@ -99,3 +99,23 @@ const person = {
 person.fullName = "Anahid Hemmat";
 
 console.log(person);
+
+// Object.defineProperty();
+
+console.log(new Date().getFullYear()); //this year 2022
+
+function User(name, birthday) {
+  this.name = name;
+  this.birthday = birthday;
+
+  //calculating age
+  Object.defineProperty(this, "age", {
+    get() {
+      let todayYear = new Date().getFullYear();
+      return todayYear - this.birthday.getFullYear();
+    },
+  });
+}
+let john = new User("John", new Date(2000, 2, 22));
+console.log(john.birthday);
+console.log(john.age);
