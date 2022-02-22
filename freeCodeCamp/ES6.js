@@ -119,3 +119,19 @@ function User(name, birthday) {
 let john = new User("John", new Date(2000, 2, 22));
 console.log(john.birthday);
 console.log(john.age);
+
+//////////////////////////////////////////////////////////////////
+// Algorithms
+//////////////////////////////////////////////////////////////////
+
+//Factorialize a Number
+function factorialize(num) {
+  let result = 1;
+  for (let i = 2; i <= num; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+factorialize(5);
