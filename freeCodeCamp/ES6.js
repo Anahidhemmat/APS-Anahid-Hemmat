@@ -258,12 +258,13 @@ console.log(bouncer2([7, "ate", "", false, 9]));
 
 //Where do I Belong
 
-// function getIndexToIns(arr, num) {
+function getIndexToIns(arr, num) {
+  arr.push(num);
 
-// }
+  return arr.sort((a, b) => a - b).indexOf(num);
+}
 
-// console.log(getIndexToIns([40, 60], 50));
-
+getIndexToIns([40, 60], 50);
 //Mutations
 
 function mutation(arr) {
