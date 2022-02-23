@@ -255,3 +255,37 @@ function bouncer2(arr) {
 }
 
 console.log(bouncer2([7, "ate", "", false, 9]));
+
+//Where do I Belong
+
+// function getIndexToIns(arr, num) {
+
+// }
+
+// console.log(getIndexToIns([40, 60], 50));
+
+//Mutations
+
+function mutation(arr) {
+  let secStr = arr.pop().toLowerCase().split("");
+  console.log(secStr);
+  let firstStr = arr[0].toLowerCase().split("");
+  console.log(firstStr);
+  for (let i = 0; i < secStr.length; i++) {
+    if (firstStr.indexOf(secStr[i]) < 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(mutation(["hello", "hey"]));
+
+function mutation2(arr) {
+  return arr[1]
+    .toLowerCase()
+    .split("")
+    .every((item) => arr[0].toLowerCase().split("").indexOf(item) !== -1);
+}
+
+console.log(mutation2(["hello", "hey"]));
