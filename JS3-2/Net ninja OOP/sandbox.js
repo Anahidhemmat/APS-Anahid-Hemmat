@@ -40,16 +40,21 @@ const userTwo = new User("mamad123", "mamad@gmail.com");
 //SUBCLASSES
 
 class Admin extends User {
+  constructor(username, email, title) {
+    //super()
+    super(username, email);
+    this.title = title;
+  }
   deleteUser(user) {
     users = users.filter((u) => u.username !== user.username);
   }
 }
 
-const userThree = new Admin("somayeh33", "somayeh@gmail.com");
+const userThree = new Admin("somayeh33", "somayeh@gmail.com", "admin");
 
 let users = [userOne, userTwo, userThree];
 
 userOne.login();
 userTwo.logout().incScore().incScore();
 userThree.deleteUser(userTwo);
-console.log(users);
+console.log(userThree);
