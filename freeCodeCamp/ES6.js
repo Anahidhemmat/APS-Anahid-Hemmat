@@ -236,3 +236,22 @@ function frankenSplice(arr1, arr2, n) {
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+//Falsy Bouncer
+
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
+
+//second way
+function bouncer2(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) newArr.push(arr[i]);
+  }
+  return newArr;
+}
+
+console.log(bouncer2([7, "ate", "", false, 9]));
