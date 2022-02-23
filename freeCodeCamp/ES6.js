@@ -199,3 +199,14 @@ function titleCase(str) {
 }
 
 titleCase("I'm a little tea pot");
+
+//Truncate a String
+function truncateString(str, num) {
+  if (str.length > num) {
+    let newStr = str.slice(0, num).concat("...");
+    return newStr;
+  }
+  return str;
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
