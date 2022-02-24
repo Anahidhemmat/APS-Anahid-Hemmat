@@ -83,3 +83,16 @@ const userFour = new User2("Kiana", "Kiana@gmail.com");
 
 userFour.login();
 userFour.logout();
+
+//sub constructor function
+
+function Admin2(username, email, title) {
+  User2.call(this, username, email);
+  this.title = title;
+}
+
+const newAdmin = new Admin2("dayan", "dayan@gmail.com", "DAN");
+Admin2.prototype = Object.create(User2.prototype); //Admin inherits prototype from User2
+Admin2.prototype.deleteUser = function () {
+  //delete a user
+};
