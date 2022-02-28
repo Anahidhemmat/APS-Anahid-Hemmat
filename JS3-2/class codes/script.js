@@ -5,6 +5,9 @@ let animal = {
   walk() {
     console.log("Animal walk");
   },
+  sleep() {
+    this.isSleeping = true;
+  },
 };
 
 let rabbit = {
@@ -18,3 +21,33 @@ let longEar = {
 };
 
 longEar.walk();
+rabbit.sleep();
+console.log(rabbit);
+// animal.sleep();
+console.log(animal);
+
+//setters and getters => prototype inheritence doesn't work for them
+
+const user = {
+  firstName: "John",
+  lastName: "Smith",
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(" ");
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+const admin = {
+  isAdmin: true,
+  __proto__: user,
+};
+
+admin.fullName = "Anahid Hemmat";
+
+console.log(user);
+console.log(admin.fullName); //Anahid Hemmat
+console.log(user.fullName); //John Smith
