@@ -15,6 +15,16 @@ let rabbit = {
   __proto__: animal, //sets animal to be the prototype of rabbit.
 };
 
+//obj.hasOwnProperty(key);
+for (let key in rabbit) {
+  let isOwn = rabbit.hasOwnProperty(key); //true false
+
+  if (isOwn) {
+    console.log(`Our: ${key}`);
+  } else {
+    console.log(`Inherited: ${key}`);
+  }
+}
 let longEar = {
   earLength: 10,
   __proto__: rabbit, //sets rabbit to be the prototype of longEar.
