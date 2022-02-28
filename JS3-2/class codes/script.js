@@ -93,12 +93,22 @@ console.log(bed.glasses); //1
 
 // Native prototypes
 // Task 1
+// Function.prototype.defer = function (ms) {
+//   setTimeout(this, ms);
+// };
+
+// function f() {
+//   console.log("Hello!");
+// }
+
+// f.defer(1000); // shows "Hello!" after 1 second
+
+// Task 2
 Function.prototype.defer = function (ms) {
   setTimeout(this, ms);
 };
-
-function f() {
-  console.log("Hello!");
+function f(a, b) {
+  console.log(a + b);
 }
 
-f.defer(1000); // shows "Hello!" after 1 second
+f.defer(1000)(1, 2); // shows 3 after 1 second
