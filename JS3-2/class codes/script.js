@@ -90,3 +90,15 @@ let pockets = {
 
 console.log(pockets.pen); //3
 console.log(bed.glasses); //1
+
+// Native prototypes
+// Task 1
+Function.prototype.defer = function (ms) {
+  setTimeout(this, ms);
+};
+
+function f() {
+  console.log("Hello!");
+}
+
+f.defer(1000); // shows "Hello!" after 1 second
