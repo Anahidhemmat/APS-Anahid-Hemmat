@@ -20,9 +20,9 @@ for (let key in rabbit) {
   let isOwn = rabbit.hasOwnProperty(key); //true false
 
   if (isOwn) {
-    console.log(`Our: ${key}`);
+    // console.log(`Our: ${key}`);
   } else {
-    console.log(`Inherited: ${key}`);
+    // console.log(`Inherited: ${key}`);
   }
 }
 let longEar = {
@@ -30,11 +30,11 @@ let longEar = {
   __proto__: rabbit, //sets rabbit to be the prototype of longEar.
 };
 
-longEar.walk();
-rabbit.sleep();
-console.log(rabbit);
-// animal.sleep();
-console.log(animal);
+// longEar.walk();
+// rabbit.sleep();
+// console.log(rabbit);
+// // animal.sleep();
+// console.log(animal);
 
 //setters and getters => prototype inheritence doesn't work for them
 
@@ -58,9 +58,9 @@ const admin = {
 
 admin.fullName = "Anahid Hemmat";
 
-console.log(user);
-console.log(admin.fullName); //Anahid Hemmat
-console.log(user.fullName); //John Smith
+// console.log(user);
+// console.log(admin.fullName); //Anahid Hemmat
+// console.log(user.fullName); //John Smith
 
 //Task
 
@@ -88,8 +88,8 @@ let pockets = {
   __proto__: bed,
 };
 
-console.log(pockets.pen); //3
-console.log(bed.glasses); //1
+// console.log(pockets.pen); //3
+// console.log(bed.glasses); //1
 
 // Native prototypes
 // Task 1
@@ -104,11 +104,29 @@ console.log(bed.glasses); //1
 // f.defer(1000); // shows "Hello!" after 1 second
 
 // Task 2
-Function.prototype.defer = function (ms) {
-  setTimeout(this, ms);
-};
-function f(a, b) {
-  console.log(a + b);
-}
+// Function.prototype.defer = function (ms) {
+//   setTimeout(this, ms);
+// };
+// function f(a, b) {
+//   console.log(a + b);
+// }
 
-f.defer(1000)(1, 2); // shows 3 after 1 second
+// f.defer(1000)(1, 2); // shows 3 after 1 second
+
+//OOP
+
+//Object literals
+
+const circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1,
+  },
+
+  draw() {
+    console.log("draw");
+  },
+};
+
+circle.draw();
