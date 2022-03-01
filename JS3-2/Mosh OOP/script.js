@@ -158,10 +158,22 @@ function Circle(radius) {
     //this.radius
     console.log("draw");
   };
+
+  //getters and setters
+  Object.defineProperty(this, "defaultLocation", {
+    get: function () {
+      return defaultLocation;
+    },
+    set: function (value) {
+      if (!value.x || !value.y) console.log("Invalid location");
+      defaultLocation = value;
+    },
+  });
 }
 
 //in operator
 const another = new Circle(1);
+another.defaultLocation = 1;
 if ("radius" in another) console.log("Circle has radius.");
 
 for (let key in another) {
