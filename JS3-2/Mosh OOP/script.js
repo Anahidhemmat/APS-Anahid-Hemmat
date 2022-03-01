@@ -147,13 +147,28 @@ circle.draw();
 
 function Circle(radius) {
   this.radius = radius;
+  //abstraction => hide details and show essentials
+  let defaultLocation = { x: 0, y: 0 };
+  let computeOptimumLocation = function (factor) {
+    //...
+  };
   this.draw = function () {
+    computeOptimumLocation(0, 1);
+    //defaultLocation
+    //this.radius
     console.log("draw");
   };
 }
 
+//in operator
 const another = new Circle(1);
-console.log(another);
+if ("radius" in another) console.log("Circle has radius.");
+
+for (let key in another) {
+  if (typeof another[key] === "function") console.log(another[key]);
+}
+
+// console.log(another);
 
 //EVERY OBJECT HAS A (CONSTRUCTOR PROPERTY => OBJ.CONSTRUCTOR) AND THAT REFRENCES THE FUNCTION THAT WAS USED TO CREATE THAT OBJECT
 
@@ -175,3 +190,8 @@ this.radius = radius;
 
 // Circle1.call({}, 1);
 // Circle1.apply({}, [1]);
+
+//Value vs Refrence Types
+
+//value types/primitives => number, string, boolean, symbol, null, undefined => copied by their value
+//Refrence Types => objects, functions, arrays => copied by their refrence
