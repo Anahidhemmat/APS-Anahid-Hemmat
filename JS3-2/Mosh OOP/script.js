@@ -207,3 +207,48 @@ this.radius = radius;
 
 //value types/primitives => number, string, boolean, symbol, null, undefined => copied by their value
 //Refrence Types => objects, functions, arrays => copied by their refrence
+
+//Exercise
+
+function StopWatch() {
+  let startTime,
+    endTime,
+    running,
+    duration = 0;
+
+  this.start = function () {
+    if (running) {
+      throw new Error("Stopwatch has already started");
+    }
+    running = true;
+    startTime = new Date();
+  };
+
+  this.stop = function () {
+    if (!running) {
+      throw new Error("Stopwatch hasn't started yet");
+    }
+    running = false;
+    endTime = new Date();
+    let seconds = (endTime.getTime() - startTime.getTime()) / 1000;
+    duration += seconds;
+  };
+  this.reset = function () {
+    startTime = null;
+    endTime = null;
+    duration = 0;
+    running = false;
+  };
+
+  //define duration property
+  Object.defineProperty(this, "duration", {
+    get: function () {
+      return duration;
+    },
+    set: function (value) {
+      duration = value;
+    },
+  });
+}
+
+const sw = new StopWatch();
