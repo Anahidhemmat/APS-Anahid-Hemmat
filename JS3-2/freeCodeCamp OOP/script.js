@@ -17,3 +17,7 @@ function Dog(name, color, numLegs) {
 
 const hound = new Dog("spot", "gray");
 console.log(hound);
+
+//Verify an Object's Constructor with instanceof operator
+
+console.log(hound instanceof Dog); //true
